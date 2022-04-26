@@ -1,0 +1,12 @@
+hello, world:0
+abcd
+hello, world:1
+abcd
+hello, world:2
+abcd
+hello, world:3
+abcd
+hello, world:4
+abcd
+hello, world:5
+abcd
