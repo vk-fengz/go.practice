@@ -5,15 +5,15 @@ package cartesian
 
 import "sync"
 
-// Iter takes interface-slices and returns a channel, receiving cartesian products
-func Iter(params ...[]interface{}) chan []interface{} {
+// IterInt takes interface-slices and returns a channel, receiving cartesian products
+func IterInt(params ...[]int) chan []int {
 	// create channel
-	c := make(chan []interface{})
+	c := make(chan []int)
 	// create waitgroup
 	var wg sync.WaitGroup
 	// call iterator
 	wg.Add(1)
-	iterate(&wg, c, []interface{}{}, params...)
+	iterateInt(&wg, c, []int{}, params...)
 	// call channel-closing go-func
 	go func() { wg.Wait(); close(c) }()
 	// return channel
@@ -21,7 +21,7 @@ func Iter(params ...[]interface{}) chan []interface{} {
 }
 
 // private, recursive Iteration-Function
-func iterate(wg *sync.WaitGroup, channel chan []interface{}, result []interface{}, params ...[]interface{}) {
+func iterateInt(wg *sync.WaitGroup, channel chan []int, result []int, params ...[]int) {
 	// dec WaitGroup when finished
 	defer wg.Done()
 	// no more params left?
@@ -37,8 +37,8 @@ func iterate(wg *sync.WaitGroup, channel chan []interface{}, result []interface{
 		// inc WaitGroup
 		wg.Add(1)
 		// create copy of result
-		resultCopy := append([]interface{}{}, result...)
+		resultCopy := append([]int{}, result...)
 		// call self with remaining params
-		go iterate(wg, channel, append(resultCopy, p[i]), params...)
+		go iterateInt(wg, channel, append(resultCopy, p[i]), params...)
 	}
 }
