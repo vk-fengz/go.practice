@@ -17,4 +17,8 @@ func main() {
 	// map[aa:[1 2] bb:[99]]
 	// bb : [99]
 	// aa : [1 2]
+
+	// re make lead to empty slice ====
+	ms = make(map[string][]int)
+	fmt.Println(ms)
 }
