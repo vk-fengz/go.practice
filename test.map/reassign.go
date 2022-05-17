@@ -1,5 +1,5 @@
 // map 重复赋值, 会覆盖, key-value
-// 可以修改int值, string 不行;
+
 package main
 
 import "fmt"
