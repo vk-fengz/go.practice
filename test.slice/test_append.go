@@ -1,5 +1,5 @@
 // 切片的拼接
-package main
+package test_slice
 
 import "fmt"
 

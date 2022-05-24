@@ -1,5 +1,6 @@
 // go 实现发送post请求的两种方法
 // https://blog.csdn.net/YMY_mine/article/details/98496009
+// 可以用 apifox 等直接生成
 
 package main
 
@@ -18,7 +19,7 @@ func main() {
 	song["password"] = "******"
 	bytesData, _ := json.Marshal(song)
 
-	res, err := http.Post("http://www.baidu.com",
+	res, err := http.Post("http://127.0.0.1:8080",
 		"application/json;charset=utf-8", bytes.NewBuffer([]byte(bytesData)))
 	if err != nil {
 		fmt.Println("Fatal error ", err.Error())
