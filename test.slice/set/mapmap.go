@@ -1,3 +1,5 @@
+// 使用struct{} 做value
+
 package main
 
 func main() {
