@@ -15,7 +15,7 @@ func saybodyHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("==============")
 
 	// write to file
-	fileName := "./posted.txt"
+	fileName := "./posted.json"
 	writeFile(fileName, string(s))
 }
 

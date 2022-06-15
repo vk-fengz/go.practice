@@ -1,0 +1,672 @@
+{
+  "appID": "case2",
+  "rbList": [
+    {
+      "kind": "ResourceBindingMerger",
+      "apiVersion": "v1alpha1",
+      "metadata": {
+        "name": "case2-rs-0-0",
+        "namespace": "gaia-merged",
+        "selfLink": "/apis/apps.gaia.io/v1alpha1/namespaces/gaia-merged/resourcebindings/case2-rs-0-0",
+        "uid": "80aad34a-c883-4670-bccc-d04a1ec0cb19",
+        "resourceVersion": "63733730",
+        "generation": 1,
+        "creationTimestamp": "2022-06-13T10:13:14Z",
+        "labels": {
+          "apps.gaia.io/description": "case2",
+          "status-scheduler": "merged"
+        },
+        "managedFields": [
+          {
+            "manager": "___controller_global_.exe",
+            "operation": "Update",
+            "apiVersion": "apps.gaia.io/v1alpha1",
+            "time": "2022-06-13T10:13:14Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:apps.gaia.io/description": {},
+                  "f:status-scheduler": {}
+                }
+              },
+              "f:spec": {
+                ".": {},
+                "f:appID": {},
+                "f:parentRB": {},
+                "f:rbApps": {},
+                "f:statusScheduler": {},
+                "f:totalpeer": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "appID": "case2",
+        "totalpeer": 1,
+        "parentRB": "case2-rs-0",
+        "rbApps": [
+          {
+            "clusterName": "field1",
+            "replicas": {
+              "component1": 1,
+              "component2": 3,
+              "component3": 3,
+              "component4": 3,
+              "component5": 3,
+              "component6": 3
+            },
+            "children": [
+              {
+                "clusterName": "cluster1",
+                "replicas": {
+                  "component1": 0,
+                  "component2": 3,
+                  "component3": 3,
+                  "component4": 3,
+                  "component5": 3,
+                  "component6": 3
+                }
+              },
+              {
+                "clusterName": "cluster2",
+                "replicas": {
+                  "component1": 1,
+                  "component2": 0,
+                  "component3": 0,
+                  "component4": 0,
+                  "component5": 0,
+                  "component6": 0
+                }
+              }
+            ]
+          },
+          {
+            "clusterName": "field2",
+            "replicas": {
+              "component1": 0,
+              "component2": 0,
+              "component3": 0,
+              "component4": 0,
+              "component5": 0,
+              "component6": 0
+            },
+            "children": [
+              {
+                "clusterName": "cluster4",
+                "replicas": {
+                  "component1": 0,
+                  "component2": 0,
+                  "component3": 0,
+                  "component4": 0,
+                  "component5": 0,
+                  "component6": 0
+                }
+              },
+              {
+                "clusterName": "cluster3",
+                "replicas": {
+                  "component1": 0,
+                  "component2": 0,
+                  "component3": 0,
+                  "component4": 0,
+                  "component5": 0,
+                  "component6": 0
+                }
+              }
+            ]
+          }
+        ],
+        "statusScheduler": "merged"
+      },
+      "status": {}
+    }
+  ],
+  "desc": {
+    "metadata": {
+      "name": "case2",
+      "namespace": "gaia-reserved",
+      "selfLink": "/apis/apps.gaia.io/v1alpha1/namespaces/gaia-reserved/descriptions/case2",
+      "uid": "8fa0d3e9-df26-4824-8b8a-8708df1b1db4",
+      "resourceVersion": "63733723",
+      "generation": 1,
+      "creationTimestamp": "2022-06-13T10:13:13Z",
+      "annotations": {
+        "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps.gaia.io/v1alpha1\",\"kind\":\"Description\",\"metadata\":{\"annotations\":{},\"name\":\"case2\",\"namespace\":\"gaia-reserved\"},\"spec\":{\"appID\":\"appID-case2\",\"components\":[{\"module\":{\"metadata\":{\"labels\":{\"app\":\"appcase2\"}},\"spec\":{\"containers\":[{\"env\":[{\"name\":\"SCNID\",\"value\":\"SCNID_C1_1\"},{\"name\":\"SCNID\",\"value\":\"SCNID_C1_2\"},{\"name\":\"SCNID\",\"value\":\"SCNID_C1_3\"},{\"name\":\"SCNID\",\"value\":\"SCNID_C1_4\"},{\"name\":\"SCNID\",\"value\":\"SCNID_C1_5\"},{\"name\":\"SCNID\",\"value\":\"SCNID_C1_6\"},{\"name\":\"IOCLIENT_ADDRESS\",\"value\":null}],\"image\":\"172.17.9.231:8880/hyperio/app:latest\",\"name\":\"appcase2comp1\",\"resources\":{\"limits\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"},\"requests\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"}},\"volumeMounts\":[{\"mountPath\":\"/dev/shm\",\"name\":\"shm\"},{\"mountPath\":\"/tmp\",\"name\":\"usock\"}]}],\"hostNetwork\":true,\"volumes\":[{\"hostPath\":{\"path\":\"/dev/shm\",\"type\":\"DirectoryOrCreate\"},\"name\":\"shm\"},{\"hostPath\":{\"path\":\"/tmp\",\"type\":\"DirectoryOrCreate\"},\"name\":\"usock\"}]}},\"name\":\"component1\",\"namespace\":\"test1\",\"runtimeType\":\"runc\",\"workload\":{\"traitaffinitydaemon\":{\"sn\":\"sn2\"},\"workloadtype\":\"affinitydaemon\"}},{\"module\":{\"metadata\":{\"labels\":{\"app\":\"appcase2\"}},\"spec\":{\"containers\":[{\"env\":[{\"name\":\"SCNID\",\"value\":\"SCNID_C2_1\"},{\"name\":\"IOCLIENT_ADDRESS\",\"value\":null}],\"image\":\"172.17.9.231:8880/hyperio/app:latest\",\"name\":\"appcase2comp2\",\"resources\":{\"limits\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"},\"requests\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"}},\"volumeMounts\":[{\"mountPath\":\"/dev/shm\",\"name\":\"shm\"},{\"mountPath\":\"/tmp\",\"name\":\"usock\"}]}],\"hostNetwork\":true,\"volumes\":[{\"hostPath\":{\"path\":\"/dev/shm\",\"type\":\"DirectoryOrCreate\"},\"name\":\"shm\"},{\"hostPath\":{\"path\":\"/tmp\",\"type\":\"DirectoryOrCreate\"},\"name\":\"usock\"}]}},\"name\":\"component2\",\"namespace\":\"test2\",\"runtimeType\":\"runc\",\"workload\":{\"traitDeployment\":{\"replicas\":3},\"workloadtype\":\"deployment\"}},{\"module\":{\"metadata\":{\"labels\":{\"app\":\"appcase2\"}},\"spec\":{\"containers\":[{\"env\":[{\"name\":\"SCNID\",\"value\":\"SCNID_C3_1\"},{\"name\":\"IOCLIENT_ADDRESS\",\"value\":null}],\"image\":\"172.17.9.231:8880/hyperio/app:latest\",\"name\":\"appcase2comp3\",\"resources\":{\"limits\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"},\"requests\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"}},\"volumeMounts\":[{\"mountPath\":\"/dev/shm\",\"name\":\"shm\"},{\"mountPath\":\"/tmp\",\"name\":\"usock\"}]}],\"hostNetwork\":true,\"volumes\":[{\"hostPath\":{\"path\":\"/dev/shm\",\"type\":\"DirectoryOrCreate\"},\"name\":\"shm\"},{\"hostPath\":{\"path\":\"/tmp\",\"type\":\"DirectoryOrCreate\"},\"name\":\"usock\"}]}},\"name\":\"component3\",\"namespace\":\"test3\",\"runtimeType\":\"runc\",\"workload\":{\"traitDeployment\":{\"replicas\":3},\"workloadtype\":\"deployment\"}},{\"module\":{\"metadata\":{\"labels\":{\"app\":\"appcase2\"}},\"spec\":{\"containers\":[{\"env\":[{\"name\":\"SCNID\",\"value\":\"SCNID_C4_1\"},{\"name\":\"IOCLIENT_ADDRESS\",\"value\":null}],\"image\":\"172.17.9.231:8880/hyperio/app:latest\",\"name\":\"appcase2comp4\",\"resources\":{\"limits\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"},\"requests\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"}},\"volumeMounts\":[{\"mountPath\":\"/dev/shm\",\"name\":\"shm\"},{\"mountPath\":\"/tmp\",\"name\":\"usock\"}]}],\"hostNetwork\":true,\"volumes\":[{\"hostPath\":{\"path\":\"/dev/shm\",\"type\":\"DirectoryOrCreate\"},\"name\":\"shm\"},{\"hostPath\":{\"path\":\"/tmp\",\"type\":\"DirectoryOrCreate\"},\"name\":\"usock\"}]}},\"name\":\"component4\",\"namespace\":\"test4\",\"runtimeType\":\"runc\",\"workload\":{\"traitDeployment\":{\"replicas\":3},\"workloadtype\":\"deployment\"}},{\"module\":{\"metadata\":{\"labels\":{\"app\":\"appcase2\"}},\"spec\":{\"containers\":[{\"env\":[{\"name\":\"SCNID\",\"value\":\"SCNID_C5_1\"},{\"name\":\"IOCLIENT_ADDRESS\",\"value\":null}],\"image\":\"172.17.9.231:8880/hyperio/app:latest\",\"name\":\"appcase2comp5\",\"resources\":{\"limits\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"},\"requests\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"}},\"volumeMounts\":[{\"mountPath\":\"/dev/shm\",\"name\":\"shm\"},{\"mountPath\":\"/tmp\",\"name\":\"usock\"}]}],\"hostNetwork\":true,\"volumes\":[{\"hostPath\":{\"path\":\"/dev/shm\",\"type\":\"DirectoryOrCreate\"},\"name\":\"shm\"},{\"hostPath\":{\"path\":\"/tmp\",\"type\":\"DirectoryOrCreate\"},\"name\":\"usock\"}]}},\"name\":\"component5\",\"namespace\":\"test5\",\"runtimeType\":\"runc\",\"workload\":{\"traitDeployment\":{\"replicas\":3},\"workloadtype\":\"deployment\"}},{\"module\":{\"metadata\":{\"labels\":{\"app\":\"appcase2\"}},\"spec\":{\"containers\":[{\"env\":[{\"name\":\"SCNID\",\"value\":\"SCNID_C6_1\"},{\"name\":\"IOCLIENT_ADDRESS\",\"value\":null}],\"image\":\"172.17.9.231:8880/hyperio/app:latest\",\"name\":\"appcase2comp6\",\"resources\":{\"limits\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"},\"requests\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"}},\"volumeMounts\":[{\"mountPath\":\"/dev/shm\",\"name\":\"shm\"},{\"mountPath\":\"/tmp\",\"name\":\"usock\"}]}],\"hostNetwork\":true,\"volumes\":[{\"hostPath\":{\"path\":\"/dev/shm\",\"type\":\"DirectoryOrCreate\"},\"name\":\"shm\"},{\"hostPath\":{\"path\":\"/tmp\",\"type\":\"DirectoryOrCreate\"},\"name\":\"usock\"}]}},\"name\":\"component6\",\"namespace\":\"test6\",\"runtimeType\":\"runc\",\"workload\":{\"traitDeployment\":{\"replicas\":3},\"workloadtype\":\"deployment\"}}]}}\n"
+      },
+      "managedFields": [
+        {
+          "manager": "gaia-scheduler",
+          "operation": "Update",
+          "apiVersion": "apps.gaia.io/v1alpha1",
+          "time": "2022-06-13T10:13:13Z",
+          "fieldsType": "FieldsV1",
+          "fieldsV1": {
+            "f:status": {
+              ".": {},
+              "f:phase": {}
+            }
+          }
+        },
+        {
+          "manager": "kubectl-client-side-apply",
+          "operation": "Update",
+          "apiVersion": "apps.gaia.io/v1alpha1",
+          "time": "2022-06-13T10:13:13Z",
+          "fieldsType": "FieldsV1",
+          "fieldsV1": {
+            "f:metadata": {
+              "f:annotations": {
+                ".": {},
+                "f:kubectl.kubernetes.io/last-applied-configuration": {}
+              }
+            },
+            "f:spec": {
+              ".": {},
+              "f:appID": {},
+              "f:components": {}
+            }
+          }
+        }
+      ]
+    },
+    "spec": {
+      "appID": "appID-case2",
+      "components": [
+        {
+          "namespace": "test1",
+          "name": "component1",
+          "serverless": {
+            "revision": {}
+          },
+          "module": {
+            "metadata": {
+              "creationTimestamp": null,
+              "labels": {
+                "app": "appcase2"
+              }
+            },
+            "spec": {
+              "volumes": [
+                {
+                  "name": "shm",
+                  "hostPath": {
+                    "path": "/dev/shm",
+                    "type": "DirectoryOrCreate"
+                  }
+                },
+                {
+                  "name": "usock",
+                  "hostPath": {
+                    "path": "/tmp",
+                    "type": "DirectoryOrCreate"
+                  }
+                }
+              ],
+              "containers": [
+                {
+                  "name": "appcase2comp1",
+                  "image": "172.17.9.231:8880/hyperio/app:latest",
+                  "env": [
+                    {
+                      "name": "SCNID",
+                      "value": "SCNID_C1_1"
+                    },
+                    {
+                      "name": "SCNID",
+                      "value": "SCNID_C1_2"
+                    },
+                    {
+                      "name": "SCNID",
+                      "value": "SCNID_C1_3"
+                    },
+                    {
+                      "name": "SCNID",
+                      "value": "SCNID_C1_4"
+                    },
+                    {
+                      "name": "SCNID",
+                      "value": "SCNID_C1_5"
+                    },
+                    {
+                      "name": "SCNID",
+                      "value": "SCNID_C1_6"
+                    },
+                    {
+                      "name": "IOCLIENT_ADDRESS"
+                    }
+                  ],
+                  "resources": {
+                    "limits": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    },
+                    "requests": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    }
+                  },
+                  "volumeMounts": [
+                    {
+                      "name": "shm",
+                      "mountPath": "/dev/shm"
+                    },
+                    {
+                      "name": "usock",
+                      "mountPath": "/tmp"
+                    }
+                  ]
+                }
+              ],
+              "hostNetwork": true
+            }
+          },
+          "runtimeType": "runc",
+          "dispersion": 1,
+          "workload": {
+            "workloadtype": "affinitydaemon",
+            "traitaffinitydaemon": {
+              "sn": "sn2"
+            }
+          },
+          "schedulePolicy": {}
+        },
+        {
+          "namespace": "test2",
+          "name": "component2",
+          "serverless": {
+            "revision": {}
+          },
+          "module": {
+            "metadata": {
+              "creationTimestamp": null,
+              "labels": {
+                "app": "appcase2"
+              }
+            },
+            "spec": {
+              "volumes": [
+                {
+                  "name": "shm",
+                  "hostPath": {
+                    "path": "/dev/shm",
+                    "type": "DirectoryOrCreate"
+                  }
+                },
+                {
+                  "name": "usock",
+                  "hostPath": {
+                    "path": "/tmp",
+                    "type": "DirectoryOrCreate"
+                  }
+                }
+              ],
+              "containers": [
+                {
+                  "name": "appcase2comp2",
+                  "image": "172.17.9.231:8880/hyperio/app:latest",
+                  "env": [
+                    {
+                      "name": "SCNID",
+                      "value": "SCNID_C2_1"
+                    },
+                    {
+                      "name": "IOCLIENT_ADDRESS"
+                    }
+                  ],
+                  "resources": {
+                    "limits": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    },
+                    "requests": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    }
+                  },
+                  "volumeMounts": [
+                    {
+                      "name": "shm",
+                      "mountPath": "/dev/shm"
+                    },
+                    {
+                      "name": "usock",
+                      "mountPath": "/tmp"
+                    }
+                  ]
+                }
+              ],
+              "hostNetwork": true
+            }
+          },
+          "runtimeType": "runc",
+          "dispersion": 1,
+          "workload": {
+            "workloadtype": "deployment",
+            "traitDeployment": {
+              "replicas": 3
+            }
+          },
+          "schedulePolicy": {}
+        },
+        {
+          "namespace": "test3",
+          "name": "component3",
+          "serverless": {
+            "revision": {}
+          },
+          "module": {
+            "metadata": {
+              "creationTimestamp": null,
+              "labels": {
+                "app": "appcase2"
+              }
+            },
+            "spec": {
+              "volumes": [
+                {
+                  "name": "shm",
+                  "hostPath": {
+                    "path": "/dev/shm",
+                    "type": "DirectoryOrCreate"
+                  }
+                },
+                {
+                  "name": "usock",
+                  "hostPath": {
+                    "path": "/tmp",
+                    "type": "DirectoryOrCreate"
+                  }
+                }
+              ],
+              "containers": [
+                {
+                  "name": "appcase2comp3",
+                  "image": "172.17.9.231:8880/hyperio/app:latest",
+                  "env": [
+                    {
+                      "name": "SCNID",
+                      "value": "SCNID_C3_1"
+                    },
+                    {
+                      "name": "IOCLIENT_ADDRESS"
+                    }
+                  ],
+                  "resources": {
+                    "limits": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    },
+                    "requests": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    }
+                  },
+                  "volumeMounts": [
+                    {
+                      "name": "shm",
+                      "mountPath": "/dev/shm"
+                    },
+                    {
+                      "name": "usock",
+                      "mountPath": "/tmp"
+                    }
+                  ]
+                }
+              ],
+              "hostNetwork": true
+            }
+          },
+          "runtimeType": "runc",
+          "dispersion": 1,
+          "workload": {
+            "workloadtype": "deployment",
+            "traitDeployment": {
+              "replicas": 3
+            }
+          },
+          "schedulePolicy": {}
+        },
+        {
+          "namespace": "test4",
+          "name": "component4",
+          "serverless": {
+            "revision": {}
+          },
+          "module": {
+            "metadata": {
+              "creationTimestamp": null,
+              "labels": {
+                "app": "appcase2"
+              }
+            },
+            "spec": {
+              "volumes": [
+                {
+                  "name": "shm",
+                  "hostPath": {
+                    "path": "/dev/shm",
+                    "type": "DirectoryOrCreate"
+                  }
+                },
+                {
+                  "name": "usock",
+                  "hostPath": {
+                    "path": "/tmp",
+                    "type": "DirectoryOrCreate"
+                  }
+                }
+              ],
+              "containers": [
+                {
+                  "name": "appcase2comp4",
+                  "image": "172.17.9.231:8880/hyperio/app:latest",
+                  "env": [
+                    {
+                      "name": "SCNID",
+                      "value": "SCNID_C4_1"
+                    },
+                    {
+                      "name": "IOCLIENT_ADDRESS"
+                    }
+                  ],
+                  "resources": {
+                    "limits": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    },
+                    "requests": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    }
+                  },
+                  "volumeMounts": [
+                    {
+                      "name": "shm",
+                      "mountPath": "/dev/shm"
+                    },
+                    {
+                      "name": "usock",
+                      "mountPath": "/tmp"
+                    }
+                  ]
+                }
+              ],
+              "hostNetwork": true
+            }
+          },
+          "runtimeType": "runc",
+          "dispersion": 1,
+          "workload": {
+            "workloadtype": "deployment",
+            "traitDeployment": {
+              "replicas": 3
+            }
+          },
+          "schedulePolicy": {}
+        },
+        {
+          "namespace": "test5",
+          "name": "component5",
+          "serverless": {
+            "revision": {}
+          },
+          "module": {
+            "metadata": {
+              "creationTimestamp": null,
+              "labels": {
+                "app": "appcase2"
+              }
+            },
+            "spec": {
+              "volumes": [
+                {
+                  "name": "shm",
+                  "hostPath": {
+                    "path": "/dev/shm",
+                    "type": "DirectoryOrCreate"
+                  }
+                },
+                {
+                  "name": "usock",
+                  "hostPath": {
+                    "path": "/tmp",
+                    "type": "DirectoryOrCreate"
+                  }
+                }
+              ],
+              "containers": [
+                {
+                  "name": "appcase2comp5",
+                  "image": "172.17.9.231:8880/hyperio/app:latest",
+                  "env": [
+                    {
+                      "name": "SCNID",
+                      "value": "SCNID_C5_1"
+                    },
+                    {
+                      "name": "IOCLIENT_ADDRESS"
+                    }
+                  ],
+                  "resources": {
+                    "limits": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    },
+                    "requests": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    }
+                  },
+                  "volumeMounts": [
+                    {
+                      "name": "shm",
+                      "mountPath": "/dev/shm"
+                    },
+                    {
+                      "name": "usock",
+                      "mountPath": "/tmp"
+                    }
+                  ]
+                }
+              ],
+              "hostNetwork": true
+            }
+          },
+          "runtimeType": "runc",
+          "dispersion": 1,
+          "workload": {
+            "workloadtype": "deployment",
+            "traitDeployment": {
+              "replicas": 3
+            }
+          },
+          "schedulePolicy": {}
+        },
+        {
+          "namespace": "test6",
+          "name": "component6",
+          "serverless": {
+            "revision": {}
+          },
+          "module": {
+            "metadata": {
+              "creationTimestamp": null,
+              "labels": {
+                "app": "appcase2"
+              }
+            },
+            "spec": {
+              "volumes": [
+                {
+                  "name": "shm",
+                  "hostPath": {
+                    "path": "/dev/shm",
+                    "type": "DirectoryOrCreate"
+                  }
+                },
+                {
+                  "name": "usock",
+                  "hostPath": {
+                    "path": "/tmp",
+                    "type": "DirectoryOrCreate"
+                  }
+                }
+              ],
+              "containers": [
+                {
+                  "name": "appcase2comp6",
+                  "image": "172.17.9.231:8880/hyperio/app:latest",
+                  "env": [
+                    {
+                      "name": "SCNID",
+                      "value": "SCNID_C6_1"
+                    },
+                    {
+                      "name": "IOCLIENT_ADDRESS"
+                    }
+                  ],
+                  "resources": {
+                    "limits": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    },
+                    "requests": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    }
+                  },
+                  "volumeMounts": [
+                    {
+                      "name": "shm",
+                      "mountPath": "/dev/shm"
+                    },
+                    {
+                      "name": "usock",
+                      "mountPath": "/tmp"
+                    }
+                  ]
+                }
+              ],
+              "hostNetwork": true
+            }
+          },
+          "runtimeType": "runc",
+          "dispersion": 1,
+          "workload": {
+            "workloadtype": "deployment",
+            "traitDeployment": {
+              "replicas": 3
+            }
+          },
+          "schedulePolicy": {}
+        }
+      ]
+    },
+    "status": {
+      "phase": "Scheduled"
+    }
+  }
+}

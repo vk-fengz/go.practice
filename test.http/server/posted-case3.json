@@ -1,0 +1,1042 @@
+{
+  "appID": "case3",
+  "rbList": [
+    {
+      "kind": "ResourceBindingMerger",
+      "apiVersion": "v1alpha1",
+      "metadata": {
+        "name": "case3-rs-1-0",
+        "namespace": "gaia-merged",
+        "uid": "0642bc45-a6cb-41ac-b1cc-a7e41ba15e8d",
+        "resourceVersion": "6807549",
+        "generation": 1,
+        "creationTimestamp": "2022-06-14T09:01:45Z",
+        "labels": {
+          "apps.gaia.io/description": "case3",
+          "status-scheduler": "merged"
+        },
+        "managedFields": [
+          {
+            "manager": "gaia",
+            "operation": "Update",
+            "apiVersion": "apps.gaia.io/v1alpha1",
+            "time": "2022-06-14T09:01:45Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:apps.gaia.io/description": {},
+                  "f:status-scheduler": {}
+                }
+              },
+              "f:spec": {
+                ".": {},
+                "f:appID": {},
+                "f:networkPath": {},
+                "f:parentRB": {},
+                "f:rbApps": {},
+                "f:statusScheduler": {},
+                "f:totalpeer": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "appID": "case3",
+        "totalpeer": 2,
+        "parentRB": "case3-rs-1",
+        "rbApps": [
+          {
+            "clusterName": "core2-field1",
+            "replicas": {
+              "component1": 0,
+              "component2": 1,
+              "component3": 0,
+              "component4": 0,
+              "component5": 3,
+              "component6": 0
+            },
+            "children": [
+              {
+                "clusterName": "core2-cluster1",
+                "replicas": {
+                  "component1": 0,
+                  "component2": 1,
+                  "component3": 0,
+                  "component4": 0,
+                  "component5": 3,
+                  "component6": 0
+                }
+              },
+              {
+                "clusterName": "edge2-cluster1",
+                "replicas": {
+                  "component1": 0,
+                  "component2": 0,
+                  "component3": 0,
+                  "component4": 0,
+                  "component5": 0,
+                  "component6": 0
+                }
+              }
+            ]
+          },
+          {
+            "clusterName": "core1-field1",
+            "replicas": {
+              "component1": 1,
+              "component2": 0,
+              "component3": 0,
+              "component4": 3,
+              "component5": 0,
+              "component6": 0
+            },
+            "children": [
+              {
+                "clusterName": "core1-cluster1",
+                "replicas": {
+                  "component1": 1,
+                  "component2": 0,
+                  "component3": 0,
+                  "component4": 3,
+                  "component5": 0,
+                  "component6": 0
+                }
+              },
+              {
+                "clusterName": "edge1-cluster1",
+                "replicas": {
+                  "component1": 0,
+                  "component2": 0,
+                  "component3": 0,
+                  "component4": 0,
+                  "component5": 0,
+                  "component6": 0
+                }
+              }
+            ]
+          },
+          {
+            "clusterName": "core3-field1",
+            "replicas": {
+              "component1": 0,
+              "component2": 0,
+              "component3": 3,
+              "component4": 0,
+              "component5": 0,
+              "component6": 3
+            },
+            "children": [
+              {
+                "clusterName": "core3-cluster1",
+                "replicas": {
+                  "component1": 0,
+                  "component2": 0,
+                  "component3": 3,
+                  "component4": 0,
+                  "component5": 0,
+                  "component6": 3
+                }
+              },
+              {
+                "clusterName": "edge3-cluster1",
+                "replicas": {
+                  "component1": 0,
+                  "component2": 0,
+                  "component3": 0,
+                  "component4": 0,
+                  "component5": 0,
+                  "component6": 0
+                }
+              }
+            ]
+          }
+        ],
+        "networkPath": [
+          "Q29RQkNpd0tIQW9LVTBOT1NVUmZRekZmTVJJS1UwTk9TVVJmUXpKZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURFdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHVVlBaElTQ2d4amIzSmxNaTFtYVdWc1pERVFBaGdCQ2tJS0xBb2NDZ3BUUTA1SlJGOURNVjh6RWdwVFEwNUpSRjlETkY4eEtBRXdBUklNQ0wrRVBSQmtHTCtFUFNBSUVoSUtER052Y21VeExXWnBaV3hrTVJBQkdBRUtoQUVLTEFvY0NncFRRMDVKUkY5RE1WODBFZ3BUUTA1SlJGOUROVjh4S0FFd0FoSU1DTCtFUFJCa0dMK0VQU0FJRWhJS0RHTnZjbVV4TFdacFpXeGtNUkFCR0FFU0xBb21hbWxoYm1kdVlXNHRabUZpY21sakxURXdNUzF6WkhkaGJpMXpjbTkxTFdoNWNHVnliM01RWlJnQ0VoSUtER052Y21VeUxXWnBaV3hrTVJBQ0dBRUtoQUVLTEFvY0NncFRRMDVKUkY5RE1WODFFZ3BUUTA1SlJGOURObDh4S0FFd0F4SU1DTCtFUFJCa0dMK0VQU0FJRWhJS0RHTnZjbVV4TFdacFpXeGtNUkFCR0FFU0xBb21hbWxoYm1kdVlXNHRabUZpY21sakxURXdNeTF6WkhkaGJpMXpjbTkxTFdoNWNHVnliM01RWnhnQ0VoSUtER052Y21VekxXWnBaV3hrTVJBREdBRT0=",
+          "Q29RQkNpd0tIQW9LVTBOT1NVUmZRekZmTVJJS1UwTk9TVVJmUXpKZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURFdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHVVlBaElTQ2d4amIzSmxNaTFtYVdWc1pERVFBaGdCQ2tJS0xBb2NDZ3BUUTA1SlJGOURNVjh6RWdwVFEwNUpSRjlETkY4eEtBRXdBUklNQ0wrRVBSQmtHTCtFUFNBSUVoSUtER052Y21VeExXWnBaV3hrTVJBQkdBRUtoQUVLTEFvY0NncFRRMDVKUkY5RE1WODBFZ3BUUTA1SlJGOUROVjh4S0FFd0FoSU1DTCtFUFJCa0dMK0VQU0FJRWhJS0RHTnZjbVV4TFdacFpXeGtNUkFCR0FFU0xBb21hbWxoYm1kdVlXNHRabUZpY21sakxURXdNUzF6WkhkaGJpMXpjbTkxTFdoNWNHVnliM01RWlJnQ0VoSUtER052Y21VeUxXWnBaV3hrTVJBQ0dBRUt4Z0VLTEFvY0NncFRRMDVKUkY5RE1WODFFZ3BUUTA1SlJGOURObDh4S0FFd0F4SU1DTCtFUFJCa0dMK0VQU0FJRWhJS0RHTnZjbVV4TFdacFpXeGtNUkFCR0FFU0xBb21hbWxoYm1kdVlXNHRabUZpY21sakxURXdNUzF6WkhkaGJpMXpjbTkxTFdoNWNHVnliM01RWlJnQ0VoSUtER052Y21VeUxXWnBaV3hrTVJBQ0dBRVNMQW9tYW1saGJtZHVZVzR0Wm1GaWNtbGpMVEV3TWkxelpIZGhiaTF6Y205MUxXaDVjR1Z5YjNNUVpoZ0NFaElLREdOdmNtVXpMV1pwWld4a01SQURHQUU9",
+          "Q29RQkNpd0tIQW9LVTBOT1NVUmZRekZmTVJJS1UwTk9TVVJmUXpKZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURFdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHVVlBaElTQ2d4amIzSmxNaTFtYVdWc1pERVFBaGdCQ2tJS0xBb2NDZ3BUUTA1SlJGOURNVjh6RWdwVFEwNUpSRjlETkY4eEtBRXdBUklNQ0wrRVBSQmtHTCtFUFNBSUVoSUtER052Y21VeExXWnBaV3hrTVJBQkdBRUt4Z0VLTEFvY0NncFRRMDVKUkY5RE1WODBFZ3BUUTA1SlJGOUROVjh4S0FFd0FoSU1DTCtFUFJCa0dMK0VQU0FJRWhJS0RHTnZjbVV4TFdacFpXeGtNUkFCR0FFU0xBb21hbWxoYm1kdVlXNHRabUZpY21sakxURXdNeTF6WkhkaGJpMXpjbTkxTFdoNWNHVnliM01RWnhnQ0VoSUtER052Y21VekxXWnBaV3hrTVJBREdBRVNMQW9tYW1saGJtZHVZVzR0Wm1GaWNtbGpMVEV3TWkxelpIZGhiaTF6Y205MUxXaDVjR1Z5YjNNUVpoZ0NFaElLREdOdmNtVXlMV1pwWld4a01SQUNHQUVLaEFFS0xBb2NDZ3BUUTA1SlJGOURNVjgxRWdwVFEwNUpSRjlETmw4eEtBRXdBeElNQ0wrRVBSQmtHTCtFUFNBSUVoSUtER052Y21VeExXWnBaV3hrTVJBQkdBRVNMQW9tYW1saGJtZHVZVzR0Wm1GaWNtbGpMVEV3TXkxelpIZGhiaTF6Y205MUxXaDVjR1Z5YjNNUVp4Z0NFaElLREdOdmNtVXpMV1pwWld4a01SQURHQUU9",
+          "Q29RQkNpd0tIQW9LVTBOT1NVUmZRekZmTVJJS1UwTk9TVVJmUXpKZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURFdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHVVlBaElTQ2d4amIzSmxNaTFtYVdWc1pERVFBaGdCQ2tJS0xBb2NDZ3BUUTA1SlJGOURNVjh6RWdwVFEwNUpSRjlETkY4eEtBRXdBUklNQ0wrRVBSQmtHTCtFUFNBSUVoSUtER052Y21VeExXWnBaV3hrTVJBQkdBRUt4Z0VLTEFvY0NncFRRMDVKUkY5RE1WODBFZ3BUUTA1SlJGOUROVjh4S0FFd0FoSU1DTCtFUFJCa0dMK0VQU0FJRWhJS0RHTnZjbVV4TFdacFpXeGtNUkFCR0FFU0xBb21hbWxoYm1kdVlXNHRabUZpY21sakxURXdNeTF6WkhkaGJpMXpjbTkxTFdoNWNHVnliM01RWnhnQ0VoSUtER052Y21VekxXWnBaV3hrTVJBREdBRVNMQW9tYW1saGJtZHVZVzR0Wm1GaWNtbGpMVEV3TWkxelpIZGhiaTF6Y205MUxXaDVjR1Z5YjNNUVpoZ0NFaElLREdOdmNtVXlMV1pwWld4a01SQUNHQUVLeGdFS0xBb2NDZ3BUUTA1SlJGOURNVjgxRWdwVFEwNUpSRjlETmw4eEtBRXdBeElNQ0wrRVBSQmtHTCtFUFNBSUVoSUtER052Y21VeExXWnBaV3hrTVJBQkdBRVNMQW9tYW1saGJtZHVZVzR0Wm1GaWNtbGpMVEV3TVMxelpIZGhiaTF6Y205MUxXaDVjR1Z5YjNNUVpSZ0NFaElLREdOdmNtVXlMV1pwWld4a01SQUNHQUVTTEFvbWFtbGhibWR1WVc0dFptRmljbWxqTFRFd01pMXpaSGRoYmkxemNtOTFMV2g1Y0dWeWIzTVFaaGdDRWhJS0RHTnZjbVV6TFdacFpXeGtNUkFER0FFPQ==",
+          "Q3NZQkNpd0tIQW9LVTBOT1NVUmZRekZmTVJJS1UwTk9TVVJmUXpKZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURNdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHY1lBaElTQ2d4amIzSmxNeTFtYVdWc1pERVFBeGdCRWl3S0ptcHBZVzVuYm1GdUxXWmhZbkpwWXkweE1ESXRjMlIzWVc0dGMzSnZkUzFvZVhCbGNtOXpFR1lZQWhJU0NneGpiM0psTWkxbWFXVnNaREVRQWhnQkNrSUtMQW9jQ2dwVFEwNUpSRjlETVY4ekVncFRRMDVKUkY5RE5GOHhLQUV3QVJJTUNMK0VQUkJrR0wrRVBTQUlFaElLREdOdmNtVXhMV1pwWld4a01SQUJHQUVLaEFFS0xBb2NDZ3BUUTA1SlJGOURNVjgwRWdwVFEwNUpSRjlETlY4eEtBRXdBaElNQ0wrRVBSQmtHTCtFUFNBSUVoSUtER052Y21VeExXWnBaV3hrTVJBQkdBRVNMQW9tYW1saGJtZHVZVzR0Wm1GaWNtbGpMVEV3TVMxelpIZGhiaTF6Y205MUxXaDVjR1Z5YjNNUVpSZ0NFaElLREdOdmNtVXlMV1pwWld4a01SQUNHQUVLaEFFS0xBb2NDZ3BUUTA1SlJGOURNVjgxRWdwVFEwNUpSRjlETmw4eEtBRXdBeElNQ0wrRVBSQmtHTCtFUFNBSUVoSUtER052Y21VeExXWnBaV3hrTVJBQkdBRVNMQW9tYW1saGJtZHVZVzR0Wm1GaWNtbGpMVEV3TXkxelpIZGhiaTF6Y205MUxXaDVjR1Z5YjNNUVp4Z0NFaElLREdOdmNtVXpMV1pwWld4a01SQURHQUU9"
+        ],
+        "statusScheduler": "merged"
+      },
+      "status": {}
+    },
+    {
+      "kind": "ResourceBindingMerger",
+      "apiVersion": "v1alpha1",
+      "metadata": {
+        "name": "case3-rs-1-1",
+        "namespace": "gaia-merged",
+        "uid": "ed9e00a8-6c14-4f0f-bffc-5684c1790641",
+        "resourceVersion": "6807550",
+        "generation": 1,
+        "creationTimestamp": "2022-06-14T09:01:45Z",
+        "labels": {
+          "apps.gaia.io/description": "case3",
+          "status-scheduler": "merged"
+        },
+        "managedFields": [
+          {
+            "manager": "gaia",
+            "operation": "Update",
+            "apiVersion": "apps.gaia.io/v1alpha1",
+            "time": "2022-06-14T09:01:45Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:apps.gaia.io/description": {},
+                  "f:status-scheduler": {}
+                }
+              },
+              "f:spec": {
+                ".": {},
+                "f:appID": {},
+                "f:networkPath": {},
+                "f:parentRB": {},
+                "f:rbApps": {},
+                "f:statusScheduler": {},
+                "f:totalpeer": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "appID": "case3",
+        "totalpeer": 2,
+        "parentRB": "case3-rs-1",
+        "rbApps": [
+          {
+            "clusterName": "core2-field1",
+            "replicas": {
+              "component1": 0,
+              "component2": 1,
+              "component3": 0,
+              "component4": 0,
+              "component5": 3,
+              "component6": 0
+            },
+            "children": [
+              {
+                "clusterName": "core2-cluster1",
+                "replicas": {
+                  "component1": 0,
+                  "component2": 1,
+                  "component3": 0,
+                  "component4": 0,
+                  "component5": 3,
+                  "component6": 0
+                }
+              },
+              {
+                "clusterName": "edge2-cluster1",
+                "replicas": {
+                  "component1": 0,
+                  "component2": 0,
+                  "component3": 0,
+                  "component4": 0,
+                  "component5": 0,
+                  "component6": 0
+                }
+              }
+            ]
+          },
+          {
+            "clusterName": "core1-field1",
+            "replicas": {
+              "component1": 1,
+              "component2": 0,
+              "component3": 0,
+              "component4": 3,
+              "component5": 0,
+              "component6": 0
+            },
+            "children": [
+              {
+                "clusterName": "core1-cluster1",
+                "replicas": {
+                  "component1": 1,
+                  "component2": 0,
+                  "component3": 0,
+                  "component4": 0,
+                  "component5": 0,
+                  "component6": 0
+                }
+              },
+              {
+                "clusterName": "edge1-cluster1",
+                "replicas": {
+                  "component1": 0,
+                  "component2": 0,
+                  "component3": 0,
+                  "component4": 3,
+                  "component5": 0,
+                  "component6": 0
+                }
+              }
+            ]
+          },
+          {
+            "clusterName": "core3-field1",
+            "replicas": {
+              "component1": 0,
+              "component2": 0,
+              "component3": 3,
+              "component4": 0,
+              "component5": 0,
+              "component6": 3
+            },
+            "children": [
+              {
+                "clusterName": "core3-cluster1",
+                "replicas": {
+                  "component1": 0,
+                  "component2": 0,
+                  "component3": 3,
+                  "component4": 0,
+                  "component5": 0,
+                  "component6": 3
+                }
+              },
+              {
+                "clusterName": "edge3-cluster1",
+                "replicas": {
+                  "component1": 0,
+                  "component2": 0,
+                  "component3": 0,
+                  "component4": 0,
+                  "component5": 0,
+                  "component6": 0
+                }
+              }
+            ]
+          }
+        ],
+        "networkPath": [
+          "Q29RQkNpd0tIQW9LVTBOT1NVUmZRekZmTVJJS1UwTk9TVVJmUXpKZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURFdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHVVlBaElTQ2d4amIzSmxNaTFtYVdWc1pERVFBaGdCQ2tJS0xBb2NDZ3BUUTA1SlJGOURNVjh6RWdwVFEwNUpSRjlETkY4eEtBRXdBUklNQ0wrRVBSQmtHTCtFUFNBSUVoSUtER052Y21VeExXWnBaV3hrTVJBQkdBRUtoQUVLTEFvY0NncFRRMDVKUkY5RE1WODBFZ3BUUTA1SlJGOUROVjh4S0FFd0FoSU1DTCtFUFJCa0dMK0VQU0FJRWhJS0RHTnZjbVV4TFdacFpXeGtNUkFCR0FFU0xBb21hbWxoYm1kdVlXNHRabUZpY21sakxURXdNUzF6WkhkaGJpMXpjbTkxTFdoNWNHVnliM01RWlJnQ0VoSUtER052Y21VeUxXWnBaV3hrTVJBQ0dBRUtoQUVLTEFvY0NncFRRMDVKUkY5RE1WODFFZ3BUUTA1SlJGOURObDh4S0FFd0F4SU1DTCtFUFJCa0dMK0VQU0FJRWhJS0RHTnZjbVV4TFdacFpXeGtNUkFCR0FFU0xBb21hbWxoYm1kdVlXNHRabUZpY21sakxURXdNeTF6WkhkaGJpMXpjbTkxTFdoNWNHVnliM01RWnhnQ0VoSUtER052Y21VekxXWnBaV3hrTVJBREdBRT0=",
+          "Q29RQkNpd0tIQW9LVTBOT1NVUmZRekZmTVJJS1UwTk9TVVJmUXpKZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURFdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHVVlBaElTQ2d4amIzSmxNaTFtYVdWc1pERVFBaGdCQ2tJS0xBb2NDZ3BUUTA1SlJGOURNVjh6RWdwVFEwNUpSRjlETkY4eEtBRXdBUklNQ0wrRVBSQmtHTCtFUFNBSUVoSUtER052Y21VeExXWnBaV3hrTVJBQkdBRUtoQUVLTEFvY0NncFRRMDVKUkY5RE1WODBFZ3BUUTA1SlJGOUROVjh4S0FFd0FoSU1DTCtFUFJCa0dMK0VQU0FJRWhJS0RHTnZjbVV4TFdacFpXeGtNUkFCR0FFU0xBb21hbWxoYm1kdVlXNHRabUZpY21sakxURXdNUzF6WkhkaGJpMXpjbTkxTFdoNWNHVnliM01RWlJnQ0VoSUtER052Y21VeUxXWnBaV3hrTVJBQ0dBRUt4Z0VLTEFvY0NncFRRMDVKUkY5RE1WODFFZ3BUUTA1SlJGOURObDh4S0FFd0F4SU1DTCtFUFJCa0dMK0VQU0FJRWhJS0RHTnZjbVV4TFdacFpXeGtNUkFCR0FFU0xBb21hbWxoYm1kdVlXNHRabUZpY21sakxURXdNUzF6WkhkaGJpMXpjbTkxTFdoNWNHVnliM01RWlJnQ0VoSUtER052Y21VeUxXWnBaV3hrTVJBQ0dBRVNMQW9tYW1saGJtZHVZVzR0Wm1GaWNtbGpMVEV3TWkxelpIZGhiaTF6Y205MUxXaDVjR1Z5YjNNUVpoZ0NFaElLREdOdmNtVXpMV1pwWld4a01SQURHQUU9",
+          "Q29RQkNpd0tIQW9LVTBOT1NVUmZRekZmTVJJS1UwTk9TVVJmUXpKZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURFdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHVVlBaElTQ2d4amIzSmxNaTFtYVdWc1pERVFBaGdCQ2tJS0xBb2NDZ3BUUTA1SlJGOURNVjh6RWdwVFEwNUpSRjlETkY4eEtBRXdBUklNQ0wrRVBSQmtHTCtFUFNBSUVoSUtER052Y21VeExXWnBaV3hrTVJBQkdBRUt4Z0VLTEFvY0NncFRRMDVKUkY5RE1WODBFZ3BUUTA1SlJGOUROVjh4S0FFd0FoSU1DTCtFUFJCa0dMK0VQU0FJRWhJS0RHTnZjbVV4TFdacFpXeGtNUkFCR0FFU0xBb21hbWxoYm1kdVlXNHRabUZpY21sakxURXdNeTF6WkhkaGJpMXpjbTkxTFdoNWNHVnliM01RWnhnQ0VoSUtER052Y21VekxXWnBaV3hrTVJBREdBRVNMQW9tYW1saGJtZHVZVzR0Wm1GaWNtbGpMVEV3TWkxelpIZGhiaTF6Y205MUxXaDVjR1Z5YjNNUVpoZ0NFaElLREdOdmNtVXlMV1pwWld4a01SQUNHQUVLaEFFS0xBb2NDZ3BUUTA1SlJGOURNVjgxRWdwVFEwNUpSRjlETmw4eEtBRXdBeElNQ0wrRVBSQmtHTCtFUFNBSUVoSUtER052Y21VeExXWnBaV3hrTVJBQkdBRVNMQW9tYW1saGJtZHVZVzR0Wm1GaWNtbGpMVEV3TXkxelpIZGhiaTF6Y205MUxXaDVjR1Z5YjNNUVp4Z0NFaElLREdOdmNtVXpMV1pwWld4a01SQURHQUU9",
+          "Q29RQkNpd0tIQW9LVTBOT1NVUmZRekZmTVJJS1UwTk9TVVJmUXpKZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURFdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHVVlBaElTQ2d4amIzSmxNaTFtYVdWc1pERVFBaGdCQ2tJS0xBb2NDZ3BUUTA1SlJGOURNVjh6RWdwVFEwNUpSRjlETkY4eEtBRXdBUklNQ0wrRVBSQmtHTCtFUFNBSUVoSUtER052Y21VeExXWnBaV3hrTVJBQkdBRUt4Z0VLTEFvY0NncFRRMDVKUkY5RE1WODBFZ3BUUTA1SlJGOUROVjh4S0FFd0FoSU1DTCtFUFJCa0dMK0VQU0FJRWhJS0RHTnZjbVV4TFdacFpXeGtNUkFCR0FFU0xBb21hbWxoYm1kdVlXNHRabUZpY21sakxURXdNeTF6WkhkaGJpMXpjbTkxTFdoNWNHVnliM01RWnhnQ0VoSUtER052Y21VekxXWnBaV3hrTVJBREdBRVNMQW9tYW1saGJtZHVZVzR0Wm1GaWNtbGpMVEV3TWkxelpIZGhiaTF6Y205MUxXaDVjR1Z5YjNNUVpoZ0NFaElLREdOdmNtVXlMV1pwWld4a01SQUNHQUVLeGdFS0xBb2NDZ3BUUTA1SlJGOURNVjgxRWdwVFEwNUpSRjlETmw4eEtBRXdBeElNQ0wrRVBSQmtHTCtFUFNBSUVoSUtER052Y21VeExXWnBaV3hrTVJBQkdBRVNMQW9tYW1saGJtZHVZVzR0Wm1GaWNtbGpMVEV3TVMxelpIZGhiaTF6Y205MUxXaDVjR1Z5YjNNUVpSZ0NFaElLREdOdmNtVXlMV1pwWld4a01SQUNHQUVTTEFvbWFtbGhibWR1WVc0dFptRmljbWxqTFRFd01pMXpaSGRoYmkxemNtOTFMV2g1Y0dWeWIzTVFaaGdDRWhJS0RHTnZjbVV6TFdacFpXeGtNUkFER0FFPQ==",
+          "Q3NZQkNpd0tIQW9LVTBOT1NVUmZRekZmTVJJS1UwTk9TVVJmUXpKZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURNdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHY1lBaElTQ2d4amIzSmxNeTFtYVdWc1pERVFBeGdCRWl3S0ptcHBZVzVuYm1GdUxXWmhZbkpwWXkweE1ESXRjMlIzWVc0dGMzSnZkUzFvZVhCbGNtOXpFR1lZQWhJU0NneGpiM0psTWkxbWFXVnNaREVRQWhnQkNrSUtMQW9jQ2dwVFEwNUpSRjlETVY4ekVncFRRMDVKUkY5RE5GOHhLQUV3QVJJTUNMK0VQUkJrR0wrRVBTQUlFaElLREdOdmNtVXhMV1pwWld4a01SQUJHQUVLaEFFS0xBb2NDZ3BUUTA1SlJGOURNVjgwRWdwVFEwNUpSRjlETlY4eEtBRXdBaElNQ0wrRVBSQmtHTCtFUFNBSUVoSUtER052Y21VeExXWnBaV3hrTVJBQkdBRVNMQW9tYW1saGJtZHVZVzR0Wm1GaWNtbGpMVEV3TVMxelpIZGhiaTF6Y205MUxXaDVjR1Z5YjNNUVpSZ0NFaElLREdOdmNtVXlMV1pwWld4a01SQUNHQUVLaEFFS0xBb2NDZ3BUUTA1SlJGOURNVjgxRWdwVFEwNUpSRjlETmw4eEtBRXdBeElNQ0wrRVBSQmtHTCtFUFNBSUVoSUtER052Y21VeExXWnBaV3hrTVJBQkdBRVNMQW9tYW1saGJtZHVZVzR0Wm1GaWNtbGpMVEV3TXkxelpIZGhiaTF6Y205MUxXaDVjR1Z5YjNNUVp4Z0NFaElLREdOdmNtVXpMV1pwWld4a01SQURHQUU9"
+        ],
+        "statusScheduler": "merged"
+      },
+      "status": {}
+    },
+    {
+      "kind": "ResourceBindingMerger",
+      "apiVersion": "v1alpha1",
+      "metadata": {
+        "name": "case3-rs-0-0",
+        "namespace": "gaia-merged",
+        "uid": "a0671290-2dc1-4bf9-a445-4cb78b3c747d",
+        "resourceVersion": "6807556",
+        "generation": 1,
+        "creationTimestamp": "2022-06-14T09:01:45Z",
+        "labels": {
+          "apps.gaia.io/description": "case3",
+          "status-scheduler": "merged"
+        },
+        "managedFields": [
+          {
+            "manager": "gaia",
+            "operation": "Update",
+            "apiVersion": "apps.gaia.io/v1alpha1",
+            "time": "2022-06-14T09:01:45Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:apps.gaia.io/description": {},
+                  "f:status-scheduler": {}
+                }
+              },
+              "f:spec": {
+                ".": {},
+                "f:appID": {},
+                "f:networkPath": {},
+                "f:parentRB": {},
+                "f:rbApps": {},
+                "f:statusScheduler": {},
+                "f:totalpeer": {}
+              }
+            }
+          }
+        ]
+      },
+      "spec": {
+        "appID": "case3",
+        "totalpeer": 2,
+        "parentRB": "case3-rs-0",
+        "rbApps": [
+          {
+            "clusterName": "core3-field1",
+            "replicas": {
+              "component1": 0,
+              "component2": 0,
+              "component3": 3,
+              "component4": 0,
+              "component5": 0,
+              "component6": 3
+            },
+            "children": [
+              {
+                "clusterName": "core3-cluster1",
+                "replicas": {
+                  "component1": 0,
+                  "component2": 0,
+                  "component3": 3,
+                  "component4": 0,
+                  "component5": 0,
+                  "component6": 3
+                }
+              },
+              {
+                "clusterName": "edge3-cluster1",
+                "replicas": {
+                  "component1": 0,
+                  "component2": 0,
+                  "component3": 0,
+                  "component4": 0,
+                  "component5": 0,
+                  "component6": 0
+                }
+              }
+            ]
+          },
+          {
+            "clusterName": "core2-field1",
+            "replicas": {
+              "component1": 0,
+              "component2": 1,
+              "component3": 0,
+              "component4": 3,
+              "component5": 3,
+              "component6": 0
+            },
+            "children": [
+              {
+                "clusterName": "core2-cluster1",
+                "replicas": {
+                  "component1": 0,
+                  "component2": 1,
+                  "component3": 0,
+                  "component4": 3,
+                  "component5": 3,
+                  "component6": 0
+                }
+              },
+              {
+                "clusterName": "edge2-cluster1",
+                "replicas": {
+                  "component1": 0,
+                  "component2": 0,
+                  "component3": 0,
+                  "component4": 0,
+                  "component5": 0,
+                  "component6": 0
+                }
+              }
+            ]
+          },
+          {
+            "clusterName": "core1-field1",
+            "replicas": {
+              "component1": 1,
+              "component2": 0,
+              "component3": 0,
+              "component4": 0,
+              "component5": 0,
+              "component6": 0
+            },
+            "children": [
+              {
+                "clusterName": "core1-cluster1",
+                "replicas": {
+                  "component1": 1,
+                  "component2": 0,
+                  "component3": 0,
+                  "component4": 0,
+                  "component5": 0,
+                  "component6": 0
+                }
+              },
+              {
+                "clusterName": "edge1-cluster1",
+                "replicas": {
+                  "component1": 0,
+                  "component2": 0,
+                  "component3": 0,
+                  "component4": 0,
+                  "component5": 0,
+                  "component6": 0
+                }
+              }
+            ]
+          }
+        ],
+        "networkPath": [
+          "Q29RQkNpd0tIQW9LVTBOT1NVUmZRekZmTVJJS1UwTk9TVVJmUXpKZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURFdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHVVlBaElTQ2d4amIzSmxNaTFtYVdWc1pERVFBaGdCQ29RQkNpd0tIQW9LVTBOT1NVUmZRekZmTXhJS1UwTk9TVVJmUXpSZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURFdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHVVlBaElTQ2d4amIzSmxNaTFtYVdWc1pERVFBaGdCQ29RQkNpd0tIQW9LVTBOT1NVUmZRekZmTkJJS1UwTk9TVVJmUXpWZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURFdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHVVlBaElTQ2d4amIzSmxNaTFtYVdWc1pERVFBaGdCQ29RQkNpd0tIQW9LVTBOT1NVUmZRekZmTlJJS1UwTk9TVVJmUXpaZk1TZ0JNQU1TREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURNdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHY1lBaElTQ2d4amIzSmxNeTFtYVdWc1pERVFBeGdC",
+          "Q29RQkNpd0tIQW9LVTBOT1NVUmZRekZmTVJJS1UwTk9TVVJmUXpKZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURFdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHVVlBaElTQ2d4amIzSmxNaTFtYVdWc1pERVFBaGdCQ29RQkNpd0tIQW9LVTBOT1NVUmZRekZmTXhJS1UwTk9TVVJmUXpSZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURFdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHVVlBaElTQ2d4amIzSmxNaTFtYVdWc1pERVFBaGdCQ29RQkNpd0tIQW9LVTBOT1NVUmZRekZmTkJJS1UwTk9TVVJmUXpWZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURFdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHVVlBaElTQ2d4amIzSmxNaTFtYVdWc1pERVFBaGdCQ3NZQkNpd0tIQW9LVTBOT1NVUmZRekZmTlJJS1UwTk9TVVJmUXpaZk1TZ0JNQU1TREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURFdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHVVlBaElTQ2d4amIzSmxNaTFtYVdWc1pERVFBaGdCRWl3S0ptcHBZVzVuYm1GdUxXWmhZbkpwWXkweE1ESXRjMlIzWVc0dGMzSnZkUzFvZVhCbGNtOXpFR1lZQWhJU0NneGpiM0psTXkxbWFXVnNaREVRQXhnQg==",
+          "Q29RQkNpd0tIQW9LVTBOT1NVUmZRekZmTVJJS1UwTk9TVVJmUXpKZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURFdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHVVlBaElTQ2d4amIzSmxNaTFtYVdWc1pERVFBaGdCQ29RQkNpd0tIQW9LVTBOT1NVUmZRekZmTXhJS1UwTk9TVVJmUXpSZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURFdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHVVlBaElTQ2d4amIzSmxNaTFtYVdWc1pERVFBaGdCQ3NZQkNpd0tIQW9LVTBOT1NVUmZRekZmTkJJS1UwTk9TVVJmUXpWZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURNdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHY1lBaElTQ2d4amIzSmxNeTFtYVdWc1pERVFBeGdCRWl3S0ptcHBZVzVuYm1GdUxXWmhZbkpwWXkweE1ESXRjMlIzWVc0dGMzSnZkUzFvZVhCbGNtOXpFR1lZQWhJU0NneGpiM0psTWkxbWFXVnNaREVRQWhnQkNvUUJDaXdLSEFvS1UwTk9TVVJmUXpGZk5SSUtVME5PU1VSZlF6WmZNU2dCTUFNU0RBaS9oRDBRWkJpL2hEMGdDQklTQ2d4amIzSmxNUzFtYVdWc1pERVFBUmdCRWl3S0ptcHBZVzVuYm1GdUxXWmhZbkpwWXkweE1ETXRjMlIzWVc0dGMzSnZkUzFvZVhCbGNtOXpFR2NZQWhJU0NneGpiM0psTXkxbWFXVnNaREVRQXhnQg==",
+          "Q29RQkNpd0tIQW9LVTBOT1NVUmZRekZmTVJJS1UwTk9TVVJmUXpKZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURFdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHVVlBaElTQ2d4amIzSmxNaTFtYVdWc1pERVFBaGdCQ29RQkNpd0tIQW9LVTBOT1NVUmZRekZmTXhJS1UwTk9TVVJmUXpSZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURFdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHVVlBaElTQ2d4amIzSmxNaTFtYVdWc1pERVFBaGdCQ3NZQkNpd0tIQW9LVTBOT1NVUmZRekZmTkJJS1UwTk9TVVJmUXpWZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURNdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHY1lBaElTQ2d4amIzSmxNeTFtYVdWc1pERVFBeGdCRWl3S0ptcHBZVzVuYm1GdUxXWmhZbkpwWXkweE1ESXRjMlIzWVc0dGMzSnZkUzFvZVhCbGNtOXpFR1lZQWhJU0NneGpiM0psTWkxbWFXVnNaREVRQWhnQkNzWUJDaXdLSEFvS1UwTk9TVVJmUXpGZk5SSUtVME5PU1VSZlF6WmZNU2dCTUFNU0RBaS9oRDBRWkJpL2hEMGdDQklTQ2d4amIzSmxNUzFtYVdWc1pERVFBUmdCRWl3S0ptcHBZVzVuYm1GdUxXWmhZbkpwWXkweE1ERXRjMlIzWVc0dGMzSnZkUzFvZVhCbGNtOXpFR1VZQWhJU0NneGpiM0psTWkxbWFXVnNaREVRQWhnQkVpd0tKbXBwWVc1bmJtRnVMV1poWW5KcFl5MHhNREl0YzJSM1lXNHRjM0p2ZFMxb2VYQmxjbTl6RUdZWUFoSVNDZ3hqYjNKbE15MW1hV1ZzWkRFUUF4Z0I=",
+          "Q29RQkNpd0tIQW9LVTBOT1NVUmZRekZmTVJJS1UwTk9TVVJmUXpKZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURFdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHVVlBaElTQ2d4amIzSmxNaTFtYVdWc1pERVFBaGdCQ3NZQkNpd0tIQW9LVTBOT1NVUmZRekZmTXhJS1UwTk9TVVJmUXpSZk1TZ0JNQUlTREFpL2hEMFFaQmkvaEQwZ0NCSVNDZ3hqYjNKbE1TMW1hV1ZzWkRFUUFSZ0JFaXdLSm1wcFlXNW5ibUZ1TFdaaFluSnBZeTB4TURNdGMyUjNZVzR0YzNKdmRTMW9lWEJsY205ekVHY1lBaElTQ2d4amIzSmxNeTFtYVdWc1pERVFBeGdCRWl3S0ptcHBZVzVuYm1GdUxXWmhZbkpwWXkweE1ESXRjMlIzWVc0dGMzSnZkUzFvZVhCbGNtOXpFR1lZQWhJU0NneGpiM0psTWkxbWFXVnNaREVRQWhnQkNvUUJDaXdLSEFvS1UwTk9TVVJmUXpGZk5CSUtVME5PU1VSZlF6VmZNU2dCTUFJU0RBaS9oRDBRWkJpL2hEMGdDQklTQ2d4amIzSmxNUzFtYVdWc1pERVFBUmdCRWl3S0ptcHBZVzVuYm1GdUxXWmhZbkpwWXkweE1ERXRjMlIzWVc0dGMzSnZkUzFvZVhCbGNtOXpFR1VZQWhJU0NneGpiM0psTWkxbWFXVnNaREVRQWhnQkNvUUJDaXdLSEFvS1UwTk9TVVJmUXpGZk5SSUtVME5PU1VSZlF6WmZNU2dCTUFNU0RBaS9oRDBRWkJpL2hEMGdDQklTQ2d4amIzSmxNUzFtYVdWc1pERVFBUmdCRWl3S0ptcHBZVzVuYm1GdUxXWmhZbkpwWXkweE1ETXRjMlIzWVc0dGMzSnZkUzFvZVhCbGNtOXpFR2NZQWhJU0NneGpiM0psTXkxbWFXVnNaREVRQXhnQg=="
+        ],
+        "statusScheduler": "merged"
+      },
+      "status": {}
+    }
+  ],
+  "desc": {
+    "metadata": {
+      "name": "case3",
+      "namespace": "gaia-reserved",
+      "uid": "679cdc14-9509-48cc-a53d-d726d00b771f",
+      "resourceVersion": "6807536",
+      "generation": 1,
+      "creationTimestamp": "2022-06-14T09:01:35Z",
+      "annotations": {
+        "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps.gaia.io/v1alpha1\",\"kind\":\"Description\",\"metadata\":{\"annotations\":{},\"name\":\"case3\",\"namespace\":\"gaia-reserved\"},\"spec\":{\"appID\":\"case3\",\"components\":[{\"module\":{\"metadata\":{\"labels\":{\"app\":\"appcase3\"}},\"spec\":{\"containers\":[{\"env\":[{\"name\":\"SCNID\",\"value\":\"SCNID_C1_1\"}],\"image\":\"172.17.9.231:8880/hyperio/app:latest\",\"name\":\"appcase3comp1\",\"resources\":{\"limits\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"},\"requests\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"}},\"volumeMounts\":[{\"mountPath\":\"/dev/shm\",\"name\":\"shm\"},{\"mountPath\":\"/tmp\",\"name\":\"usock\"}]}],\"hostNetwork\":true,\"volumes\":[{\"hostPath\":{\"path\":\"/dev/shm\",\"type\":\"DirectoryOrCreate\"},\"name\":\"shm\"},{\"hostPath\":{\"path\":\"/tmp\",\"type\":\"DirectoryOrCreate\"},\"name\":\"usock\"}]}},\"name\":\"component1\",\"namespace\":\"test1\",\"runtimeType\":\"runc\",\"workload\":{\"traitaffinitydaemon\":{\"sn\":\"cluster1sn1\"},\"workloadtype\":\"affinitydaemon\"}},{\"module\":{\"metadata\":{\"labels\":{\"app\":\"appcase3\"}},\"spec\":{\"containers\":[{\"env\":[{\"name\":\"SCNID\",\"value\":\"SCNID_C2_1\"},{\"name\":\"IOCLIENT_ADDRESS\",\"value\":null}],\"image\":\"172.17.9.231:8880/hyperio/app:latest\",\"name\":\"appcase3comp2\",\"resources\":{\"limits\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"},\"requests\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"}},\"volumeMounts\":[{\"mountPath\":\"/dev/shm\",\"name\":\"shm\"},{\"mountPath\":\"/tmp\",\"name\":\"usock\"}]}],\"hostNetwork\":true,\"volumes\":[{\"hostPath\":{\"path\":\"/dev/shm\",\"type\":\"DirectoryOrCreate\"},\"name\":\"shm\"},{\"hostPath\":{\"path\":\"/tmp\",\"type\":\"DirectoryOrCreate\"},\"name\":\"usock\"}]}},\"name\":\"component2\",\"namespace\":\"test2\",\"runtimeType\":\"runc\",\"schedulePolicy\":{\"specificResource\":{\"matchExpressions\":[{\"key\":\"sn\",\"operator\":\"In\",\"values\":[\"core2-cluster1sn1\"]}]}},\"workload\":{\"traitDeployment\":{\"replicas\":1},\"workloadtype\":\"deployment\"}},{\"module\":{\"metadata\":{\"labels\":{\"app\":\"appcase3\"}},\"spec\":{\"containers\":[{\"env\":[{\"name\":\"SCNID\",\"value\":\"SCNID_C3_1\"},{\"name\":\"IOCLIENT_ADDRESS\",\"value\":null}],\"image\":\"172.17.9.231:8880/hyperio/app:latest\",\"name\":\"appcase3comp3\",\"resources\":{\"limits\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"},\"requests\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"}},\"volumeMounts\":[{\"mountPath\":\"/dev/shm\",\"name\":\"shm\"},{\"mountPath\":\"/tmp\",\"name\":\"usock\"}]}],\"hostNetwork\":true,\"volumes\":[{\"hostPath\":{\"path\":\"/dev/shm\",\"type\":\"DirectoryOrCreate\"},\"name\":\"shm\"},{\"hostPath\":{\"path\":\"/tmp\",\"type\":\"DirectoryOrCreate\"},\"name\":\"usock\"}]}},\"name\":\"component3\",\"namespace\":\"test3\",\"runtimeType\":\"runc\",\"schedulePolicy\":{\"specificResource\":{\"matchExpressions\":[{\"key\":\"sn\",\"operator\":\"In\",\"values\":[\"core3-cluster1sn1\"]}]}},\"workload\":{\"traitDeployment\":{\"replicas\":3},\"workloadtype\":\"deployment\"}},{\"module\":{\"metadata\":{\"labels\":{\"app\":\"appcase3\"}},\"spec\":{\"containers\":[{\"env\":[{\"name\":\"SCNID\",\"value\":\"SCNID_C4_1\"},{\"name\":\"IOCLIENT_ADDRESS\",\"value\":null}],\"image\":\"172.17.9.231:8880/hyperio/app:latest\",\"name\":\"appcase3comp4\",\"resources\":{\"limits\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"},\"requests\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"}},\"volumeMounts\":[{\"mountPath\":\"/dev/shm\",\"name\":\"shm\"},{\"mountPath\":\"/tmp\",\"name\":\"usock\"}]}],\"hostNetwork\":true,\"volumes\":[{\"hostPath\":{\"path\":\"/dev/shm\",\"type\":\"DirectoryOrCreate\"},\"name\":\"shm\"},{\"hostPath\":{\"path\":\"/tmp\",\"type\":\"DirectoryOrCreate\"},\"name\":\"usock\"}]}},\"name\":\"component4\",\"namespace\":\"test4\",\"runtimeType\":\"runc\",\"workload\":{\"traitDeployment\":{\"replicas\":3},\"workloadtype\":\"deployment\"}},{\"module\":{\"metadata\":{\"labels\":{\"app\":\"appcase3\"}},\"spec\":{\"containers\":[{\"env\":[{\"name\":\"SCNID\",\"value\":\"SCNID_C5_1\"},{\"name\":\"IOCLIENT_ADDRESS\",\"value\":null}],\"image\":\"172.17.9.231:8880/hyperio/app:latest\",\"name\":\"appcase3comp5\",\"resources\":{\"limits\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"},\"requests\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"}},\"volumeMounts\":[{\"mountPath\":\"/dev/shm\",\"name\":\"shm\"},{\"mountPath\":\"/tmp\",\"name\":\"usock\"}]}],\"hostNetwork\":true,\"volumes\":[{\"hostPath\":{\"path\":\"/dev/shm\",\"type\":\"DirectoryOrCreate\"},\"name\":\"shm\"},{\"hostPath\":{\"path\":\"/tmp\",\"type\":\"DirectoryOrCreate\"},\"name\":\"usock\"}]}},\"name\":\"component5\",\"namespace\":\"test5\",\"runtimeType\":\"runc\",\"workload\":{\"traitDeployment\":{\"replicas\":3},\"workloadtype\":\"deployment\"}},{\"module\":{\"metadata\":{\"labels\":{\"app\":\"appcase3\"}},\"spec\":{\"containers\":[{\"env\":[{\"name\":\"SCNID\",\"value\":\"SCNID_C6_1\"},{\"name\":\"IOCLIENT_ADDRESS\",\"value\":null}],\"image\":\"172.17.9.231:8880/hyperio/app:latest\",\"name\":\"appcase3comp6\",\"resources\":{\"limits\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"},\"requests\":{\"cpu\":\"100m\",\"memory\":\"100Mi\"}},\"volumeMounts\":[{\"mountPath\":\"/dev/shm\",\"name\":\"shm\"},{\"mountPath\":\"/tmp\",\"name\":\"usock\"}]}],\"hostNetwork\":true,\"volumes\":[{\"hostPath\":{\"path\":\"/dev/shm\",\"type\":\"DirectoryOrCreate\"},\"name\":\"shm\"},{\"hostPath\":{\"path\":\"/tmp\",\"type\":\"DirectoryOrCreate\"},\"name\":\"usock\"}]}},\"name\":\"component6\",\"namespace\":\"test6\",\"runtimeType\":\"runc\",\"workload\":{\"traitDeployment\":{\"replicas\":3},\"workloadtype\":\"deployment\"}}]}}\n"
+      },
+      "managedFields": [
+        {
+          "manager": "kubectl-client-side-apply",
+          "operation": "Update",
+          "apiVersion": "apps.gaia.io/v1alpha1",
+          "time": "2022-06-14T09:01:35Z",
+          "fieldsType": "FieldsV1",
+          "fieldsV1": {
+            "f:metadata": {
+              "f:annotations": {
+                ".": {},
+                "f:kubectl.kubernetes.io/last-applied-configuration": {}
+              }
+            },
+            "f:spec": {
+              ".": {},
+              "f:appID": {},
+              "f:components": {}
+            }
+          }
+        },
+        {
+          "manager": "gaia-scheduler",
+          "operation": "Update",
+          "apiVersion": "apps.gaia.io/v1alpha1",
+          "time": "2022-06-14T09:01:44Z",
+          "fieldsType": "FieldsV1",
+          "fieldsV1": {
+            "f:status": {
+              ".": {},
+              "f:phase": {}
+            }
+          }
+        }
+      ]
+    },
+    "spec": {
+      "appID": "case3",
+      "components": [
+        {
+          "namespace": "test1",
+          "name": "component1",
+          "serverless": {
+            "revision": {}
+          },
+          "module": {
+            "metadata": {
+              "creationTimestamp": null,
+              "labels": {
+                "app": "appcase3"
+              }
+            },
+            "spec": {
+              "volumes": [
+                {
+                  "name": "shm",
+                  "hostPath": {
+                    "path": "/dev/shm",
+                    "type": "DirectoryOrCreate"
+                  }
+                },
+                {
+                  "name": "usock",
+                  "hostPath": {
+                    "path": "/tmp",
+                    "type": "DirectoryOrCreate"
+                  }
+                }
+              ],
+              "containers": [
+                {
+                  "name": "appcase3comp1",
+                  "image": "172.17.9.231:8880/hyperio/app:latest",
+                  "env": [
+                    {
+                      "name": "SCNID",
+                      "value": "SCNID_C1_1"
+                    }
+                  ],
+                  "resources": {
+                    "limits": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    },
+                    "requests": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    }
+                  },
+                  "volumeMounts": [
+                    {
+                      "name": "shm",
+                      "mountPath": "/dev/shm"
+                    },
+                    {
+                      "name": "usock",
+                      "mountPath": "/tmp"
+                    }
+                  ]
+                }
+              ],
+              "hostNetwork": true
+            }
+          },
+          "runtimeType": "runc",
+          "dispersion": 1,
+          "workload": {
+            "workloadtype": "affinitydaemon",
+            "traitaffinitydaemon": {
+              "sn": "cluster1sn1"
+            }
+          },
+          "schedulePolicy": {}
+        },
+        {
+          "namespace": "test2",
+          "name": "component2",
+          "serverless": {
+            "revision": {}
+          },
+          "module": {
+            "metadata": {
+              "creationTimestamp": null,
+              "labels": {
+                "app": "appcase3"
+              }
+            },
+            "spec": {
+              "volumes": [
+                {
+                  "name": "shm",
+                  "hostPath": {
+                    "path": "/dev/shm",
+                    "type": "DirectoryOrCreate"
+                  }
+                },
+                {
+                  "name": "usock",
+                  "hostPath": {
+                    "path": "/tmp",
+                    "type": "DirectoryOrCreate"
+                  }
+                }
+              ],
+              "containers": [
+                {
+                  "name": "appcase3comp2",
+                  "image": "172.17.9.231:8880/hyperio/app:latest",
+                  "env": [
+                    {
+                      "name": "SCNID",
+                      "value": "SCNID_C2_1"
+                    },
+                    {
+                      "name": "IOCLIENT_ADDRESS"
+                    }
+                  ],
+                  "resources": {
+                    "limits": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    },
+                    "requests": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    }
+                  },
+                  "volumeMounts": [
+                    {
+                      "name": "shm",
+                      "mountPath": "/dev/shm"
+                    },
+                    {
+                      "name": "usock",
+                      "mountPath": "/tmp"
+                    }
+                  ]
+                }
+              ],
+              "hostNetwork": true
+            }
+          },
+          "runtimeType": "runc",
+          "dispersion": 1,
+          "workload": {
+            "workloadtype": "deployment",
+            "traitDeployment": {
+              "replicas": 1
+            }
+          },
+          "schedulePolicy": {
+            "specificResource": {
+              "matchExpressions": [
+                {
+                  "key": "sn",
+                  "operator": "In",
+                  "values": [
+                    "core2-cluster1sn1"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "namespace": "test3",
+          "name": "component3",
+          "serverless": {
+            "revision": {}
+          },
+          "module": {
+            "metadata": {
+              "creationTimestamp": null,
+              "labels": {
+                "app": "appcase3"
+              }
+            },
+            "spec": {
+              "volumes": [
+                {
+                  "name": "shm",
+                  "hostPath": {
+                    "path": "/dev/shm",
+                    "type": "DirectoryOrCreate"
+                  }
+                },
+                {
+                  "name": "usock",
+                  "hostPath": {
+                    "path": "/tmp",
+                    "type": "DirectoryOrCreate"
+                  }
+                }
+              ],
+              "containers": [
+                {
+                  "name": "appcase3comp3",
+                  "image": "172.17.9.231:8880/hyperio/app:latest",
+                  "env": [
+                    {
+                      "name": "SCNID",
+                      "value": "SCNID_C3_1"
+                    },
+                    {
+                      "name": "IOCLIENT_ADDRESS"
+                    }
+                  ],
+                  "resources": {
+                    "limits": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    },
+                    "requests": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    }
+                  },
+                  "volumeMounts": [
+                    {
+                      "name": "shm",
+                      "mountPath": "/dev/shm"
+                    },
+                    {
+                      "name": "usock",
+                      "mountPath": "/tmp"
+                    }
+                  ]
+                }
+              ],
+              "hostNetwork": true
+            }
+          },
+          "runtimeType": "runc",
+          "dispersion": 1,
+          "workload": {
+            "workloadtype": "deployment",
+            "traitDeployment": {
+              "replicas": 3
+            }
+          },
+          "schedulePolicy": {
+            "specificResource": {
+              "matchExpressions": [
+                {
+                  "key": "sn",
+                  "operator": "In",
+                  "values": [
+                    "core3-cluster1sn1"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "namespace": "test4",
+          "name": "component4",
+          "serverless": {
+            "revision": {}
+          },
+          "module": {
+            "metadata": {
+              "creationTimestamp": null,
+              "labels": {
+                "app": "appcase3"
+              }
+            },
+            "spec": {
+              "volumes": [
+                {
+                  "name": "shm",
+                  "hostPath": {
+                    "path": "/dev/shm",
+                    "type": "DirectoryOrCreate"
+                  }
+                },
+                {
+                  "name": "usock",
+                  "hostPath": {
+                    "path": "/tmp",
+                    "type": "DirectoryOrCreate"
+                  }
+                }
+              ],
+              "containers": [
+                {
+                  "name": "appcase3comp4",
+                  "image": "172.17.9.231:8880/hyperio/app:latest",
+                  "env": [
+                    {
+                      "name": "SCNID",
+                      "value": "SCNID_C4_1"
+                    },
+                    {
+                      "name": "IOCLIENT_ADDRESS"
+                    }
+                  ],
+                  "resources": {
+                    "limits": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    },
+                    "requests": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    }
+                  },
+                  "volumeMounts": [
+                    {
+                      "name": "shm",
+                      "mountPath": "/dev/shm"
+                    },
+                    {
+                      "name": "usock",
+                      "mountPath": "/tmp"
+                    }
+                  ]
+                }
+              ],
+              "hostNetwork": true
+            }
+          },
+          "runtimeType": "runc",
+          "dispersion": 1,
+          "workload": {
+            "workloadtype": "deployment",
+            "traitDeployment": {
+              "replicas": 3
+            }
+          },
+          "schedulePolicy": {}
+        },
+        {
+          "namespace": "test5",
+          "name": "component5",
+          "serverless": {
+            "revision": {}
+          },
+          "module": {
+            "metadata": {
+              "creationTimestamp": null,
+              "labels": {
+                "app": "appcase3"
+              }
+            },
+            "spec": {
+              "volumes": [
+                {
+                  "name": "shm",
+                  "hostPath": {
+                    "path": "/dev/shm",
+                    "type": "DirectoryOrCreate"
+                  }
+                },
+                {
+                  "name": "usock",
+                  "hostPath": {
+                    "path": "/tmp",
+                    "type": "DirectoryOrCreate"
+                  }
+                }
+              ],
+              "containers": [
+                {
+                  "name": "appcase3comp5",
+                  "image": "172.17.9.231:8880/hyperio/app:latest",
+                  "env": [
+                    {
+                      "name": "SCNID",
+                      "value": "SCNID_C5_1"
+                    },
+                    {
+                      "name": "IOCLIENT_ADDRESS"
+                    }
+                  ],
+                  "resources": {
+                    "limits": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    },
+                    "requests": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    }
+                  },
+                  "volumeMounts": [
+                    {
+                      "name": "shm",
+                      "mountPath": "/dev/shm"
+                    },
+                    {
+                      "name": "usock",
+                      "mountPath": "/tmp"
+                    }
+                  ]
+                }
+              ],
+              "hostNetwork": true
+            }
+          },
+          "runtimeType": "runc",
+          "dispersion": 1,
+          "workload": {
+            "workloadtype": "deployment",
+            "traitDeployment": {
+              "replicas": 3
+            }
+          },
+          "schedulePolicy": {}
+        },
+        {
+          "namespace": "test6",
+          "name": "component6",
+          "serverless": {
+            "revision": {}
+          },
+          "module": {
+            "metadata": {
+              "creationTimestamp": null,
+              "labels": {
+                "app": "appcase3"
+              }
+            },
+            "spec": {
+              "volumes": [
+                {
+                  "name": "shm",
+                  "hostPath": {
+                    "path": "/dev/shm",
+                    "type": "DirectoryOrCreate"
+                  }
+                },
+                {
+                  "name": "usock",
+                  "hostPath": {
+                    "path": "/tmp",
+                    "type": "DirectoryOrCreate"
+                  }
+                }
+              ],
+              "containers": [
+                {
+                  "name": "appcase3comp6",
+                  "image": "172.17.9.231:8880/hyperio/app:latest",
+                  "env": [
+                    {
+                      "name": "SCNID",
+                      "value": "SCNID_C6_1"
+                    },
+                    {
+                      "name": "IOCLIENT_ADDRESS"
+                    }
+                  ],
+                  "resources": {
+                    "limits": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    },
+                    "requests": {
+                      "cpu": "100m",
+                      "memory": "100Mi"
+                    }
+                  },
+                  "volumeMounts": [
+                    {
+                      "name": "shm",
+                      "mountPath": "/dev/shm"
+                    },
+                    {
+                      "name": "usock",
+                      "mountPath": "/tmp"
+                    }
+                  ]
+                }
+              ],
+              "hostNetwork": true
+            }
+          },
+          "runtimeType": "runc",
+          "dispersion": 1,
+          "workload": {
+            "workloadtype": "deployment",
+            "traitDeployment": {
+              "replicas": 3
+            }
+          },
+          "schedulePolicy": {}
+        }
+      ]
+    },
+    "status": {
+      "phase": "Scheduled"
+    }
+  }
+}
