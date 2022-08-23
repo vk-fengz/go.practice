@@ -1,10 +1,9 @@
 package main
 
 import (
-	pb "demo/example"
+	"context"
 	"fmt"
-	"golang.org/x/net/context"
-	"google.golang.org/grpc"
+	pb "github.com/VK-Link/code.practice/gRPC/demo-helloworld/hello_gRPC"
 )
 
 const (

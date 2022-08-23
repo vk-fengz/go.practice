@@ -4,6 +4,11 @@
 // 	protoc        v3.21.5
 // source: data.proto
 
+// TODO:
+// 执行以下命令, 生成pb.go文件
+//    LENOVO@PML-A8-11 MINGW64 /d/OpenSourceProjects/src/github.com/VK-Link/code.practice/gRPC/demo-helloworld/example (master)
+//    $ protoc --go_out=.  --go_opt=paths=source_relative --go-grpc_out=.  --go-grpc_opt=paths=source_relative  data.proto
+
 package hello_gRPC
 
 import (
