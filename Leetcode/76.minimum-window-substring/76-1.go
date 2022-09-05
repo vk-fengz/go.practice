@@ -10,16 +10,17 @@ func minWindow(s string, t string) string {
 		need[t[i]]++
 	}
 	// valid 验证满足与否
-	left, right, valid := 0, 0, 0
+
 	// 记录最小覆盖子串的起始索引及 结束
-	finalLeft, finalRight, minw:= -1, -1, len(s)
+	result, left, right := "", 0, 0
+	finalLeft, finalRight, minw, valid := -1, -1, len(s), 0
 	for right < len(s) {
 		// 移入的元素
 		moin := s[right]
 		// 扩大窗口
 		right++
 		// 进行窗口内数据的一系列更新
-		if need[moin] != 0 {
+		if _, ok := need[moin]; ok {
 			window[moin]++
 			if window[moin] == need[moin] {
 				valid++
@@ -27,12 +28,32 @@ func minWindow(s string, t string) string {
 		}
 
 		// 判断窗口是否要收缩
-		for valid == len(need){
+		for valid == len(need) {
 			// 更新最小覆盖子串
-			if right -left+1 <
+			if right-left <= minw {
+				minw = right - left
+				finalLeft = left
+				finalRight = right
+			}
+
+			// moveout 是移出的字符
+			moveout := s[left]
+			left++
+			// 对窗口数据进行更新
+			if _, ok := need[moveout]; ok {
+				if window[moveout] == need[moveout] {
+					valid--
+				}
+				window[moveout]--
+			}
 		}
 
 	}
+	// 返回最小覆盖子串
+	if finalLeft != -1 {
+		result = s[finalLeft:finalRight]
+	}
+	return result
 }
 
 // m2. 字符串 'a' 转换成数字 来记录  -- leetcode gobook
