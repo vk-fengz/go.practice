@@ -1,4 +1,4 @@
-module github.com/VK-Link/code.practice/test.gin/jwt
+module github.com/VK-Link/go.practice/test.gin/jwt
 
 go 1.17
 

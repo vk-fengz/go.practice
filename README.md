@@ -1,2 +1,2 @@
-# code.pracetice
+# go.pracetice
 go learn 

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"VK-Link/code.practice/Leetcode/cartesianCom/cartesian"
+	"VK-Link/go.practice/Leetcode/cartesianCom/cartesian"
 	"fmt"
 )
 

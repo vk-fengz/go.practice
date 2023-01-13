@@ -1,4 +1,4 @@
-module github.com/VK-Link/code.practice/test.gin
+module github.com/VK-Link/go.practice/test.gin
 
 go 1.17
 
