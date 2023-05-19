@@ -35,5 +35,4 @@ func main() {
 	}
 
 	fmt.Println(indexTable["aa"])
-
 }
