@@ -5,9 +5,15 @@ import "fmt"
 func main() {
 
 	m := make(map[string]bool, 0)
+	mp := make(map[string]*int, 0)
 
 	if m["a"] == false {
 		fmt.Println(m)
+		fmt.Println(m["b"])
 		fmt.Println("access nil success.")
+	}
+	fmt.Println(mp["a"])
+	if mp["b"] == nil {
+		fmt.Println("access mp success.")
 	}
 }
