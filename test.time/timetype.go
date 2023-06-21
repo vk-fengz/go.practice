@@ -10,9 +10,13 @@ func main() {
 	// 用 p 简写
 	p := fmt.Println
 
+	// 取地址
+	aint := 10
+	p("aint的地址:", &aint, aint)
 	// 当前时间
 	now := time.Now()
 	p("当前时间：", now) // 当前时间： 2022-04-12 16:58:13.1294251 +0800 CST m=+0.005672001
+	p("当前时间地址", &now)
 
 	utcnow := time.Now().UTC()
 	p("当前时间utc：", utcnow)
@@ -22,8 +26,9 @@ func main() {
 	p("当前年份：", year) // 前年份： 2022
 	// 获取星期几
 	weekday := now.Weekday()
-	p("当前是周几：", weekday)         // 当前是周几： Tuesday
-	p("明天是周几：", now.Weekday()+1) //
+	p("当前是周几：", weekday)          // 当前是周几： Tuesday
+	p("当前是周几 pointer：", &weekday) // 当前是周几： Tuesday
+	p("明天是周几：", now.Weekday()+1)  //
 
 	// 构造时间，Date 的最后一个参数是时区
 	myTime := time.Date(1996, time.April, 27, 0, 0, 0, 0, time.UTC)
@@ -47,14 +52,14 @@ func main() {
 	diff := end.Sub(start)
 	p("end - start 的时间，结果是：", diff) // 当前时间减去 my2000Year 设置的时间，结果是： 12h0m0s
 
-	//时区
+	// 时区
 	// America/New_York
 	// Asia/Shanghai
 	loc, err := time.LoadLocation("Asia/Shanghai")
 	if err != nil {
 		log.Panicln("转换时区失败")
 	}
-	fmt.Println(time.Now().In(loc)) //这里需要配合t.In()
+	fmt.Println(time.Now().In(loc)) // 这里需要配合t.In()
 
 	// test time.time
 	var tt time.Time

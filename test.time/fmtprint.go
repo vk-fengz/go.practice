@@ -11,6 +11,5 @@ func main() {
 	fmt.Println("time.Now()：", time.Now())
 	fmt.Println("2006-01-02 15:04:05：", time.Now().Format("2006-01-02 15:04:05"))
 	fmt.Println("format-999：", time.Now().Format("2006-01-02 15:04:05.999"))
-	time.ParseDuration()
 
 }
