@@ -9,4 +9,5 @@ func main() {
 	// fmt.Println(&sli[0])
 	sli = []int{1, 2}
 	fmt.Println(sli)
+
 }
