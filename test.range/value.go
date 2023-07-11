@@ -1,27 +1,36 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 )
 
 type user struct {
-    name string
-    age  uint64
+	name string
+	age  uint64
 }
 
 func main() {
-    u := []user{
-        {"asong", 23},
-        {"song", 19},
-        {"asong2020", 18},
-    }
-    n := make([]user, 0, len(u))
-    for _, v := range u {
-        n = append(n, v)
-    }
+	origin := []user{
+		{"asong", 23},
+		{"song", 19},
+		{"asong2020", 18},
+	}
+	fmt.Println("origin slice:", origin)
 
-    fmt.Println(n)
-    for _, v := range n {
-        fmt.Println(v)
-    }
+	second := make([]user, 0, len(origin))
+	for _, v := range origin {
+		second = append(second, v)
+	}
+	fmt.Println("range append:", second)
+
+	fmt.Println("==range print:")
+	for _, v := range second {
+		fmt.Println(v)
+	}
+
+	fmt.Println("==range print one value: index :")
+	for k := range second {
+		fmt.Println(k)
+	}
+
 }

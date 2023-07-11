@@ -1,7 +1,9 @@
 // 切片的拼接
-package test_slice
+package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	var a = []int{1, 2}
@@ -14,6 +16,8 @@ func main() {
 	var eslice []int
 	eslice = append(eslice, 1)
 	eslice = append(eslice, []int{2, 3}...)
-	fmt.Println(eslice)
+	fmt.Println("eslice:", eslice)
+	eslice = append(eslice, a...)
+	fmt.Println("eslice append a:", eslice)
 
 }
