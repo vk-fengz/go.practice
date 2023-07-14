@@ -30,7 +30,7 @@ func main() {
 
 	fmt.Println("==range print one value: index :")
 	for k := range second {
-		fmt.Println(k)
+		fmt.Println(k) // k is index, not value
 	}
 
 }

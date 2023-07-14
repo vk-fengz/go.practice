@@ -33,8 +33,11 @@ func main() {
 	// 构造时间，Date 的最后一个参数是时区
 	myTime := time.Date(1996, time.April, 27, 0, 0, 0, 0, time.UTC)
 	localTime := time.Date(1996, time.April, 27, 0, 0, 0, 0, time.Now().Location())
+	// 两天后
+	twoDayAfterlocal := localTime.AddDate(0, 0, 2)
 	p("我构造的时间：", myTime)
-	p("我构造的时间：", localTime)
+	p("我构造的时间 localtime：", localTime)
+	p("我构造的时间 两天后 localtime：", twoDayAfterlocal)
 
 	// 时间比较，有 Before(), Equal(), After()
 	// 这里展示 Before() 就都懂了

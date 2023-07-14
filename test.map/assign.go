@@ -16,7 +16,7 @@ func main() {
 
 	scaleDst["aa"] = scale["aa"]
 
-	fmt.Println("--------")
+	fmt.Println("-------- assign")
 	fmt.Println("The final map")
 	fmt.Println("map scale: ", scale)
 	fmt.Println("map scaleDst: ", scaleDst)
