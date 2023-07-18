@@ -6,6 +6,9 @@ import (
 )
 
 func main() {
+
+	fmt.Println("------ now: ", time.Now().Local())
+
 	var layout string = "2006-01-02 15:04:05"
 	var timeStr string = "2019-12-12 15:22:12"
 	var timeOnly string = "15:22:12"
@@ -37,14 +40,15 @@ func main() {
 	fmt.Println("RFC1123Z dateTime: ", rfz.Month())
 }
 
+// ------ now:  2023-07-18 09:30:03.967692371 +0800 CST
 // 2019-12-12 15:22:12 +0000 UTC
 // 2019-12-12 15:22:12 +0800 CST
 // 0000-01-01 15:22:12 +0000 UTC
 // tOnly after:  false
-// 构建时间after now:  false
-// 构建时间 2023-07-17 15:22:12 +0800 CST
-// 2023-07-17 15:22:12 +0800 CST
-// value nowCons 2023-07-19 15:22:12 +0800 CST
-// value nowCons 2023-07-19 15:22:12 +0800 CST
+// 构建时间after now:  true
+// 构建时间 2023-07-18 15:22:12 +0800 CST
+// 2023-07-18 15:22:12 +0800 CST
+// value nowCons 2023-07-20 15:22:12 +0800 CST
+// value nowCons 2023-07-20 15:22:12 +0800 CST
 // --------- RFC1123Z
 // RFC1123Z dateTime:  January
