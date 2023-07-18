@@ -2,9 +2,6 @@ package main
 
 import "fmt"
 
-
-
-
 func main() {
 	x := []int{1, 2, 3}
 	i := 2
@@ -23,16 +20,16 @@ func main() {
 	//==append
 	var s = make([]int, 0, 5)
 	fmt.Printf("%p\n", &s)
-	s2 := append(s,1)
+	s2 := append(s, 1)
 	fmt.Printf("%p\n", &s2)
 
 	fmt.Println(s, s2)
 
 	//Map
 	println("==Map")
-	m := map[int] struct {
+	m := map[int]struct {
 		name string
-		age	 int
+		age  int
 	}{
 		1: {"user1", 10},
 		2: {"user2", 20},
@@ -52,17 +49,5 @@ func main() {
 		}
 		fmt.Println(m)
 	}
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
