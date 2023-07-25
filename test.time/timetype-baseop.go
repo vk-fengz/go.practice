@@ -30,15 +30,17 @@ func main() {
 	p("当前是周几 pointer：", &weekday) // 当前是周几： Tuesday
 	p("明天是周几：", now.Weekday()+1)  //
 
+	p("----------- 构造时间: ")
 	// 构造时间，Date 的最后一个参数是时区
 	myTime := time.Date(1996, time.April, 27, 0, 0, 0, 0, time.UTC)
-	localTime := time.Date(1996, time.April, 27, 0, 0, 0, 0, time.Now().Location())
+	myTimeLocal := time.Date(1996, time.April, 27, 0, 0, 0, 0, time.Now().Location())
 	// 两天后
-	twoDayAfterlocal := localTime.AddDate(0, 0, 2)
+	twoDayAftermyTimeLocal := myTimeLocal.AddDate(0, 0, 2)
 	p("我构造的时间：", myTime)
-	p("我构造的时间 localtime：", localTime)
-	p("我构造的时间 两天后 localtime：", twoDayAfterlocal)
+	p("我构造的时间 localtime：", myTimeLocal)
+	p("我构造的时间 两天后 localtime：", twoDayAftermyTimeLocal)
 
+	p("----------- 时间对比 加减:")
 	// 时间比较，有 Before(), Equal(), After()
 	// 这里展示 Before() 就都懂了
 	// 首先构建两个时间
@@ -56,16 +58,22 @@ func main() {
 	p("end - start 的时间，结果是：", diff) // 当前时间减去 my2000Year 设置的时间，结果是： 12h0m0s
 
 	// 时区
+	p("----------- 时区 ")
 	// America/New_York
 	// Asia/Shanghai
 	loc, err := time.LoadLocation("Asia/Shanghai")
 	if err != nil {
 		log.Panicln("转换时区失败")
 	}
-	fmt.Println(time.Now().In(loc)) // 这里需要配合t.In()
+	fmt.Println("local 当前时间:", time.Now().In(loc)) // 这里需要配合t.In()
 
-	// test time.time
-	var tt time.Time
+	tUTC := time.Unix(myTimeLocal.Unix()+10000, 0).UTC()
+	tLoc := time.Unix(myTimeLocal.Unix()+10000, 0).Local()
+	p("myTime add sec UTC:", tUTC)
+	p("myTime add sec localTimezone:", tLoc)
+
+	p("-------- test var time")
+	tt := time.Time{}
 	var tw time.Weekday
 
 	var ttp *time.Time
@@ -77,3 +85,23 @@ func main() {
 	p(twp)
 
 }
+
+// aint的地址: 0xc0000160c0 10
+// 当前时间： 2023-07-19 14:55:13.310146392 +0800 CST m=+0.000097147
+// 当前时间地址 2023-07-19 14:55:13.310146392 +0800 CST m=+0.000097147
+// 当前时间utc： 2023-07-19 06:55:13.310284567 +0000 UTC
+// 当前年份： 2023
+// 当前是周几： Wednesday
+// 当前是周几 pointer： Wednesday
+// 明天是周几： Thursday
+// 我构造的时间： 1996-04-27 00:00:00 +0000 UTC
+// 我构造的时间 localtime： 1996-04-27 00:00:00 +0800 CST
+// 我构造的时间 两天后 localtime： 1996-04-29 00:00:00 +0800 CST
+// 2000 年在 3000 年之前吗： true
+// end - start 的时间，结果是： 12h0m0s
+// 2023-07-19 14:55:13.310403053 +0800 CST
+// -------- test var time
+// 0001-01-01 00:00:00 +0000 UTC
+// Sunday
+// <nil>
+// <nil>
