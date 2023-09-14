@@ -1,4 +1,4 @@
-module github.com/VK-Link/go.practice
+module github.com/vk-fengz/go.practice
 
 go 1.17
 

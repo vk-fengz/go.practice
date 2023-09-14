@@ -1,4 +1,4 @@
-module github.com/VK-Link/go.practice/test.gin/learntest
+module github.com/vk-fengz/go.practice/test.gin/learntest
 
 go 1.17
 
