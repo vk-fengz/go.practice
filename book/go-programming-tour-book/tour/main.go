@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-	"vk-fengz/go.practice/book/go-programming-tour-book/tour/cmd"
+	"vk-fengz/go.practice/book/go-programming-tour-book/tour/cmd" // 看mod里面的链接
 )
 
 func main() {
@@ -11,3 +11,6 @@ func main() {
 		log.Fatalf("cmd.Execute err: %v", err)
 	}
 }
+
+// go run main.go word -s=EddyCjy -m=5
+// 输出结果: eddy_cjy

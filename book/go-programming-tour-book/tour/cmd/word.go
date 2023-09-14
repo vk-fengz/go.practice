@@ -4,8 +4,8 @@ import (
 	"log"
 	"strings"
 
-	""
 	"github.com/spf13/cobra"
+	"vk-fengz/go.practice/book/go-programming-tour-book/tour/internal/word"
 )
 
 const (

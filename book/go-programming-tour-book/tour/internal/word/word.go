@@ -19,11 +19,13 @@ func UnderscoreToUpperCamelCase(s string) string {
 	return strings.Replace(s, " ", "", -1)
 }
 
+// 下划线转小写驼峰
 func UnderscoreToLowerCamelCase(s string) string {
 	s = UnderscoreToUpperCamelCase(s)
 	return string(unicode.ToLower(rune(s[0]))) + s[1:]
 }
 
+// 驼峰转下划线
 func CamelCaseToUnderscore(s string) string {
 	var output []rune
 	for i, r := range s {
