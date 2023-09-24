@@ -1,14 +1,14 @@
 package main
 
 import (
-    "fmt"
-    "strconv"
+	"fmt"
+	"strconv"
 )
 
 func test() (i int) {
 	i = 0
 	defer func() {
-		fmt.Println("\ndefer1")
+		fmt.Println("\ndefer1: ", i)
 	}()
 	defer func() {
 		i += 1

@@ -11,6 +11,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
+// 在默认值上，标准库 time 使用的是 UTC 时区。
+
 var timeCmd = &cobra.Command{
 	Use:   "time",
 	Short: "时间格式处理",

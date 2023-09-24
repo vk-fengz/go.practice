@@ -3,4 +3,5 @@
 > go-programming-tour-book 
 > 代码仓库: https://github.com/go-programming-tour-book
 
-第一涨: tour
+第一章: tour 
+第二章: https://github.com/go-programming-tour-book/blog-service.git

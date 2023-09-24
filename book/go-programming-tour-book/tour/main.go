@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-	"vk-fengz/go.practice/book/go-programming-tour-book/tour/cmd" // 看mod里面的链接
+	"vk-fengz/go.practice/book/go-programming-tour-book/tour/cmd"
 )
 
 func main() {
