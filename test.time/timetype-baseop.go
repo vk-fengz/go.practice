@@ -61,7 +61,7 @@ func main() {
 	p("----------- 时区 ")
 	// America/New_York
 	// Asia/Shanghai
-	loc, err := time.LoadLocation("Asia/Shanghai")
+	loc, err := time.LoadLocation("Asia/Shanghai") // windows系统会出错,依赖tzdata
 	if err != nil {
 		log.Panicln("转换时区失败")
 	}
@@ -71,6 +71,27 @@ func main() {
 	tLoc := time.Unix(myTimeLocal.Unix()+10000, 0).Local()
 	p("myTime add sec UTC:", tUTC)
 	p("myTime add sec localTimezone:", tLoc)
+
+	// method 2    timezone
+	p("----------- 设置时区 方法2")
+	var cstZone = time.FixedZone("CST", 8*3600) // 东八区, 设置时区推荐方法
+	p("==> set CST zone")
+	time.Local = cstZone
+	tSH := time.Now().Local()
+	p("tSH: ", tSH)
+	p("tSH localtion: ", tSH.Location())
+
+	time.Sleep(5 * time.Second)
+	p("==> set UTC zone")
+	time.Local = time.UTC
+	tUTCz := time.Now().Local()
+	p("tUTCz: ", tUTCz)
+	p("tUTCz to CST: ", tUTCz.In(cstZone))
+	p("tUTCz localtion: ", tUTCz.Location())
+	// time compare
+	p("==> time compare: tUTCz.After(tSH) == ", tUTCz.After(tSH))
+	p("tUTCz=", tUTCz)
+	p("tSH  =", tSH)
 
 	p("-------- test var time")
 	tt := time.Time{}
@@ -86,20 +107,25 @@ func main() {
 
 }
 
-// aint的地址: 0xc0000160c0 10
-// 当前时间： 2023-07-19 14:55:13.310146392 +0800 CST m=+0.000097147
-// 当前时间地址 2023-07-19 14:55:13.310146392 +0800 CST m=+0.000097147
-// 当前时间utc： 2023-07-19 06:55:13.310284567 +0000 UTC
+// aint的地址: 0xc0000ac000 10
+// 当前时间： 2023-11-03 17:54:53.670630828 +0800 CST m=+0.000137122
+// 当前时间地址 2023-11-03 17:54:53.670630828 +0800 CST m=+0.000137122
+// 当前时间utc： 2023-11-03 09:54:53.670786144 +0000 UTC
 // 当前年份： 2023
-// 当前是周几： Wednesday
-// 当前是周几 pointer： Wednesday
-// 明天是周几： Thursday
+// 当前是周几： Friday
+// 当前是周几 pointer： Friday
+// 明天是周几： Saturday
+// ----------- 构造时间:
 // 我构造的时间： 1996-04-27 00:00:00 +0000 UTC
 // 我构造的时间 localtime： 1996-04-27 00:00:00 +0800 CST
 // 我构造的时间 两天后 localtime： 1996-04-29 00:00:00 +0800 CST
+// ----------- 时间对比 加减:
 // 2000 年在 3000 年之前吗： true
 // end - start 的时间，结果是： 12h0m0s
-// 2023-07-19 14:55:13.310403053 +0800 CST
+// ----------- 时区
+// local 当前时间: 2023-11-03 17:54:53.670933546 +0800 CST
+// myTime add sec UTC: 1996-04-26 18:46:40 +0000 UTC
+// myTime add sec localTimezone: 1996-04-27 02:46:40 +0800 CST
 // -------- test var time
 // 0001-01-01 00:00:00 +0000 UTC
 // Sunday
