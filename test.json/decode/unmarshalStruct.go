@@ -16,11 +16,12 @@ type stu struct {
 }
 
 type gpuResource struct {
-	GPUProduct   string `json:"gpuProduct"`
-	GPUCount     int    `json:"gpuCount"`
-	GPUMemory    int    `json:"gpuMemory"`
-	ScheduleType string `json:"scheduleType"`
-	GpuIsolate   bool   `json:"gpuIsolate"`
+	ContainerName string `json:"containerName"` // 容器名称
+	GPUProduct    string `json:"gpuProduct"`    // GPU产品型号
+	GPUCount      int    `json:"gpuCount"`      // GPU数量
+	GPUMemory     int    `json:"gpuMemory"`     // GPU显存大小
+	ScheduleType  string `json:"scheduleType"`  // 调度类型：共享或独占  shared/exclusive(默认)
+	GpuIsolate    bool   `json:"gpuIsolate"`    // 调度类型为共享时，算力是否隔离：true/false
 }
 
 func main() {
@@ -36,8 +37,8 @@ func main() {
 	fmt.Println(xxm)
 	fmt.Println(xxm.Age)
 
-	var gpu1 = gpuResource{GPUProduct: "Tesla-P4", GPUCount: 0, GPUMemory: 0, ScheduleType: "", GpuIsolate: false}
-	var gpu2 = gpuResource{GPUProduct: "Tesla-V100", GPUCount: 0, GPUMemory: 0, ScheduleType: "", GpuIsolate: false}
+	var gpu1 = gpuResource{ContainerName: "gpupod1", GPUProduct: "Tesla-P4", GPUCount: 0, GPUMemory: 0, ScheduleType: "", GpuIsolate: false}
+	var gpu2 = gpuResource{ContainerName: "gpupod2", GPUProduct: "Tesla-V100", GPUCount: 0, GPUMemory: 0, ScheduleType: "", GpuIsolate: false}
 	gpuSli := []gpuResource{gpu1, gpu2}
 	gpuJson, err := json.Marshal(gpuSli)
 	if err != nil {

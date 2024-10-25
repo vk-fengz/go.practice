@@ -19,6 +19,13 @@ func main() {
 		fmt.Println(s1["chenchao"])
 	}
 
+	// 结构体map
+	resign := make(map[string]struct{})
+	resign["geo"] = struct{}{}
+	resign["geo"] = struct{}{}
+	resign["geo"] = struct{}{}
+
+	fmt.Println(resign["geo"])
 }
 
 // bb
