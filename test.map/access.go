@@ -6,6 +6,7 @@ func main() {
 
 	m := make(map[string]bool, 0)
 	mp := make(map[string]*int, 0)
+	mps := make(map[string]string, 0)
 
 	if m["a"] == false {
 		fmt.Println(m)
@@ -14,6 +15,9 @@ func main() {
 	}
 	fmt.Println(mp["a"])
 	if mp["b"] == nil {
-		fmt.Println("access mp success.")
+		fmt.Println("access map success.")
 	}
+
+	fmt.Println(mps["a"] == "")
+
 }
