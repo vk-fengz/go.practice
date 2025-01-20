@@ -1,5 +1,5 @@
 // 切片拼接的问题
-package test_slice
+package main
 
 import "fmt"
 
@@ -29,7 +29,7 @@ func main() {
 
 	/* 打印子切片从索引 2(包含) 到索引 5(不包含) */
 	number3 := numbers[2:5]
-	printSlice(number3) // 3 7 234
+	printSlice(number3) //  234
 
 }
 
